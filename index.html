@@ -1,959 +1,710 @@
 <!DOCTYPE html>
 <html lang="en">
-
-	<head>
-
-		<!-- Meta tags -->
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-		<meta name="description" content="Xiaolong Tu's website, biography, education, previous experience and published papers."/>
-		<meta name="keywords" content="Xiaolong Tu, Xiaolong Tu, Xiaolong Tu, Xiaolont Tu youtube, Xiaolong Tu github, Xiaolong Tu cv, Xiaolong Tu portfolio"/>
-		
-		<meta name="author" content="Xiaolong Tu" />
-		<meta name="copyright" content="Work protected by copyright; no distribution without permission." />
-		
-		<!-- Title + Icon -->
-		<title>Xiaolong Tu</title>
-		<link rel="icon" type="image/x-icon" href="assets/img/AMAI-dark-mini.png">
-
-		<!-- Improve SEO -->
-		<meta name="robots" content="index,follow" />
-
-		<!-- Styles -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-		<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-		<link rel="stylesheet" href="assets/css/main.css">
-
-	</head>
-
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LS62H88490"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'G-LS62H88490');
-	</script>
-
-	<body>
-
-		<!-- Bottom rounded button -->
-		<div class="options-button" id="options-toggler"><i class="fa-light fa-arrows-repeat"></i></div>
-		<div class="options-button" id="theme"><i class="fa-duotone fa-lightbulb"></i></div>
-		<div class="options-button" id="lan"><img class="lang-flag" src="/assets/img/en_flag.webp" alt="Flag indicating the english language is selected"></div>
-
-
-		<!-- Navbar  -->
-		<nav id="top-nav" class="navbar navbar-expand-md navbar-light bg-light flex-md-nowrap flex-wrap">
-			<div class="container justify-content-center">
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="navbar-collapse collapse flex-grow-1 justify-content-center" id="collapsingNavbar3">
-					<ul class="navbar-nav mx-auto language" id="navbarList">
-						<li class="nav-item">
-							<a class="nav-link active" id="aboutme" href="#" 
-								data-es="Sobre Mi" 
-								data-en="About Me">
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="Projects" href="#" 
-								data-es="Educación" 
-								data-en="Projects">
-						</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="publications" href="#" 
-								data-es="Publicaciones" 
-								data-en="Publications">
-						</a>
-						<!-- </li>
-						<li class="nav-item">
-							<a class="nav-link d-none" id="tutorials" href="#" 
-								data-es="Tutoriales" 
-								data-en="Tutorials">
-							</a>
-						</li> -->
-						<li class="nav-item">
-							<a class="nav-link" id="amai" href="https://www.amai-gsu.us/" target="_blank"> AMAI</a>
-						</li>
-						<!-- <li class="nav-item">
-							<a class="nav-link" id="particular" href="#" 
-								data-es="Clases Particulares" 
-								data-en="Private Lessons">
-							</a>
-						</li> -->
-						<!-- <li class="nav-item">
-							<a class="nav-link" id="mowatave" href="https://mowatave.com" target="_blank">Mowatave</a>
-						</li> -->
-						<li class="nav-item">
-							<a class="nav-link d-none" id="projects" href="#" 
-								data-es="Proyectos" 
-								data-en="Side Projects">
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link d-none" id="conferences" href="#" 
-								data-es="Conferencias" 
-								data-en="Conferences">
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link d-none" id="experience" href="#" 
-								data-es="Experiencia" 
-								data-en="Experience">
-							</a>
-						</li>
-						<!-- TEMPLATE
-						<li class="nav-item">
-							<a class="nav-link" id="name" href="#" data-es="name-es" data-en="name-en"></a>
-						</li>
-						-->
-					</ul>
-				</div>
-			</div>
-		</nav>
-
-		<div class="container" id="main-content">
-			<div class="row content">
-				
-				<!-- Nicolas Meseguer profile and contact info -->
-				<div id="leftPanel" class="col-md-3 language">
-					<div class="row mb-3">
-						<div class="col">
-							<img src="assets/img/Xiaolong Tu.JPG" class="rounded me-auto d-block img-fluid profilepicture" alt="Xiaolong Tu profile picture">
-						</div>
-					</div>
-
-					<h3 class="mb-2">Xiaolong Tu</h3>
-
-					<div class="d-none" id="contadorVisitas"></div>
-
-					<p class="mb-4">
-						<span class="t-secondary"
-						data-en="Ph.D. Student at Georgia State University "></span>
-					</p>
-					
-					<div class="row mb-2">
-						<div class="col-1">
-							<i class="fal fa-map-marker-alt" aria-hidden="true"></i>
-						</div>
-
-						<div class="col-10">
-							<span 
-								data-es="Atlanta, GA" 
-								data-en="Atlanta, GA">
-							</span> 
-							<!-- <br/>
-							Murcia, 
-							<span 
-								data-es="España" 
-								data-en="Spain">
-							</span> -->
-						</div>
-					</div>
-
-					<div class="row mb-2">
-						<div class="col-1">
-							<i class="ai ai-cv" aria-hidden="true"></i>
-						</div>
-
-						<div class="col-10">
-							<a href="assets/documents/CV_xiaolong.pdf" class="link-dark" target="_blank" data-es="CV [Actualizado 09/2023]" data-en="CV [Updated 09/2023]"></a>
-						</div>
-					</div>
-
-					<div class="row mb-2">
-						<div class="col-1">
-							<i class="fa-regular fa-envelope" aria-hidden="true"></i>
-						</div>
-
-						<div class="col-10">
-							<a href="mailto:xtu1@gsu.edu" class="link-dark">xtu1@gsu.edu</a>
-						</div>
-					</div>
-
-					<div class="row mb-2">
-						<div class="col-1">
-							<i class="fas fa-graduation-cap" aria-hidden="true"></i>
-						</div>
-
-						<div class="col-10">
-							<a href="https://scholar.google.com/citations?user=8gENWR0AAAAJ&hl=en" class="link-dark" target="_blank">Google Scholar</a>
-						</div>
-					</div>
-
-					<div class="row mb-2">
-						<div class="col-1">
-							<i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-						</div>
-
-						<div class="col-10">
-							<a href="https://www.linkedin.com/in/xiaolong-tu-96562ba5/" class="link-dark" target="_blank">LinkedIn</a>
-						</div>
-					</div>
-
-					<!-- <div class="row mb-2">
-						<div class="col-1">
-							<i class="fa-brands fa-twitter" aria-hidden="true"></i>
-						</div>
-
-						<div class="col-10">
-							<a href="https://twitter.com/NicolasMeseguer" class="link-dark" target="_blank">Twitter</a>
-						</div>
-					</div> -->
-
-					<div class="row mb-2">
-						<div class="col-1">
-							<i class="fab fa-github" aria-hidden="true"></i>
-						</div>
-
-						<div class="col-10">
-							<a href="https://github.com/xiaolong-shawn?tab=repositories" class="link-dark" target="_blank">GitHub</a>
-						</div>
-					</div>
-
-					<!-- <div class="row mb-2">
-						<div class="col-1">
-							<i class="fab fa-gitlab" aria-hidden="true"></i>
-						</div>
-
-						<div class="col-10">
-							<a href="https://gitlab.com/NicolasMeseguer" class="link-dark" target="_blank">GitLab</a>
-						</div>
-					</div> -->
-
-					<!-- <div class="row mb-2">
-						<div class="col-1">
-							<i class="fa-solid fa-plus"></i>
-						</div>
-
-						<div class="col-10">
-							<a href="https://fseneca.es/tfs/fpi/ficha/8362" class="link-dark" target="_blank"><img class="fseneca" src="/assets/img/fseneca-color.svg" alt="Fundación Séneca"></a>
-						</div>
-					</div> -->
-				</div>
-
-				<!-- About Me -->
-				<div class="col-md-8 offset-md-1 mb-5 active" id="aboutmeContent">
-					<div class="container">
-						<div class="row language">
-
-							<h4 id="biographyH4" class="mt-2" 
-							data-en="Biography">
-							</h4>
-
-							<p class="mt-2 justify" data-en="Hey! My name is Xiaolong Tu (涂小龙), and I am a second-year PhD student at <a href='https://www.amai-gsu.us/'>AMAI lab</a> in Computer Science at Georgia State University. My research focuses on edge computing and the energy efficiency of edge AI systems, with the goal of designing sustainable and environmentally-friendly edge AI technologies.">
-							</p>
-							<p class="mt-2 justify">
-								Before embarking on my academic journey, I worked in the industry for over 10 years, holding positions at Ericsson, Huawei, Qualcomm, and Apple.
-							</p>
-
-							<h4 id="researchinterestsH4" class="mt-2" 
-								data-en="Research Interests">
-							</h4>
-
-							<p class="mt-1"
-								data-en="Edge Computing, Energy-efficient AI system, Sustainable AI">
-							</p>
-
-							<h4 id="educationH4" class="mt-2" 
-							data-en="Education">
-							</h4>
-
-							<p class="mt-1"
-							data-en="2023 ~ : PhD. Student at Georgia State Unverisity">
-							</p>
-							<p class="mt-1"
-							data-en="2008 ~ 2012: B.S at Hubei Unversity">
-							</p>
-
-							<h4 id="honors-and-awards" class="mt-2" data-es="Premios y Distinciones" data-en="Honors and Awards"></h4>
-
-							<ul class="mt-1">
-
-								<li class="abme-honors-bullet">
-									<strong>Student Conference Travel Award</strong>, <span data-en="The inaugural Martin D. Fraser Graduate Student Conference Travel Award"></span> 
-									<a href="https://csds.gsu.edu/2023/10/30/fraser-travel-award-winners-announced/" class="link-dark" target="_blank"></a>
-									- <span data-en="Oct, 2023"></span>
-								</li>
-
-								<li class="abme-honors-bullet mt-2">
-									<strong>NSF Student Travel Grant Award</strong>, <span data-en="SEC 2023 Student Travel Award"></span> 
-									- <span data-en="2023"></span>
-								</li>
-
-								<!-- <li class="abme-honors-bullet mt-2">
-									<strong><span data-es="Beca Universitaria" data-en="University scholarship"></span></strong> <span data-es="para el máster" data-en="for the master's degree"></span> (M.S.)
-									[<a href="./assets/documents/NicolasMeseguerScholarship.pdf" class="link-dark" target="_blank">1</a>] 
-									- Nov, 2022
-								</li>
-
-								<li class="abme-honors-bullet mt-2">
-									<strong>🥇 Telefónica Hack4Good</strong>, <span data-es="con una aplicación contra el desperdicio cero de alimentos" data-en="with an application against zero food waste"></span>
-									[<a href="./assets/documents/HackForGood2022NicolasMeseguer.pdf" class="link-dark" target="_blank">1</a>]
-									[<a href="https://www.ucam.edu/noticias/investigacion-salud-deporte-protagonistas-actividades-ucam" class="link-dark" target="_blank">2</a>]
-									[<a href="https://www.linkedin.com/posts/universidad-catolica-san-antonio-de-murcia_secyt22-investigaciaejn-salud-activity-6989572524854382592-zMr4" class="link-dark" target="_blank">3</a>] 
-									- Oct, 2022
-								</li>
-
-								<li class="abme-honors-bullet mt-2">
-									<strong><span data-es="Premio Extraordinario" data-en="Extraordinary Award"></span></strong>, <span data-es="por el mejor Expeidente Académico en Ingeniería Informática" data-en="for the Best Computer Engineering Academic Record"></span> (B.S.)
-									[<a href="./assets/documents/imgs/NicolasMeseguerAward.jpg" class="link-dark" target="_blank">1</a>] 
-									- Jun, 2022
-								</li>
-
-								<li class="abme-honors-bullet mt-2">
-									<strong><span data-es="Beca de Iniciación a la Investigación" data-en="Research Initiation Scholarship"></span></strong> <span data-es="para jóvenes investigadores prometedores" data-en="for promising young researchers"></span>
-									[<a href="./assets/documents/NicolasMeseguerResearchGrant.pdf" class="link-dark" target="_blank">1</a>] 
-									- Feb, 2021
-								</li>
-
-								<li class="abme-honors-bullet mt-2">
-									<strong><span data-es="Beca Erasmus+" data-en="Erasmus+ Scholarship"></span></strong>, <span data-es="para unas prácticas europeas" data-en="for a european internship"></span>
-									[<a href="./assets/documents/imgs/NicolasMeseguerGermany.png" class="link-dark" target="_blank">1</a>] 
-									- Mar, 2018
-								</li> -->
-							</ul>
-
-							<h4 id="hobbiesH4" class="mt-2">Hobbies</h4>
-
-							<div class="container">
-								<div class="row mt-3">
-									<!-- <div class="thumbnail col-md-3">
-										<img class="rounded mx-auto d-block img-fluid" src="/assets/img/NicolasMeseguerProgramming.webp" alt="Programming and Math">
-									</div>
-									<div class="col-md-9" id="hobbie1">
-										<b 
-											data-en="Programming + Math">
-										</b>
-
-										<br />
-										<p class="mt-2 d-inline justify"
-											data-es="Desde pequeño sentí curiosidad por saber cómo se creaban los escenarios (visualmente) de los diferentes videojuegos; cómo los motores gráficos conseguían lo que yo consideraba en aquella época unos 'gráficos increíbles'. Motivado por esto y por mi pasión por la programación, he incluido los ejercicios de"
-											data-en="Since I was a child I was curious to know how the scenarios were created (visually) in different videogames; how the graphics engines managed to achieve, what I considered at that time to be, 'unbelievable graphics'. Motivated by this and by my passion for programming, I've included the exercises in">
-										</p>
-
-										<a href="https://projecteuler.net/" class="link-dark" target="_blank">Project Euler</a> <span data-es="en mi" data-en="into my"></span> <a href="https://github.com/NicolasMeseguer/Toolbox" class="link-dark" target="_blank"><span data-es="propio repositorio de código abierto" data-en="own open-source repository"></span></a>.
-
-									</div>
-								</div>
-
-								<div class="row mt-5">
-									<div class="thumbnail col-md-3">
-										<img class="rounded mx-auto d-block img-fluid" src="/assets/img/NicolasMeseguerTailandia.webp" alt="Travelling">
-									</div>
-									<div class="col-md-9" id="hobbie2">
-										<b 
-											data-es="Viajar" 
-											data-en="Travelling">
-										</b>
-
-										<br />
-										<p class="mt-2 d-inline justify"
-											data-es="Decidí viajar a Alemania para hacer unas prácticas el mismo año que terminé el grado superior. Desde entonces, me he propuesto ir a un lugar nuevo al menos una vez al año. He recorrido Italia, conducido en moto a través de Tailandia (sin embargo, la pandemia me lo ha puesto bastante dificil estos últimos años)."
-											data-en="I opted to move to Germany for an internship the same year I finished my undergraduate degree (HNC). Since then, I've made it a goal to go to a new location at least once a year. I've been across Italy and Thailand since then (although the pandemic has hampered my progress quite a bit this last years).">
-										</p>
-
-									</div> -->
-								</div>
-								
-								<!-- <div class="row mt-5">
-									<div class="thumbnail col-md-3">
-										<img class="rounded mx-auto d-block img-fluid" src="/assets/img/NicolasMeseguerYouTube.webp" alt="Content Creator on YouTube">
-									</div>
-									<div class="col-md-9" id="hobbie3">
-										<b 
-											data-es="Filmaker (casi nunca)" 
-											data-en="Video Creator (rarely)">
-										</b>
-
-										<br />
-										<p class="mt-2 d-inline justify"
-											data-es="Me gusta compartir mis experiencias en el campo de la tecnología. Llevo viendo vídeos en internet desde que tengo uso de razón, así que en 2018 decidí crearme un canal de"
-											data-en="I enjoy sharing my experiences, particularly in the field of technology. I've been watching videos on the internet for as long as I can remember, so in 2018 I decided to start a">
-										</p>
-
-										<a href="https://www.youtube.com/c/NicolasMeseguer" class="link-dark" target="_blank">YouTube</a><span data-es="." data-en=""></span>
-
-										<span
-											data-es="Algunos vídeos tienen más de 150 mil visitas a día de hoy... ¿No es increíble? Si tienes suerte puedes encontrarme por"
-											data-en="channel. Some videos have already received over 150 thousand views as of today... Isn't it amazing? If lucky enough you can find me at">
-										</span>
-
-										<a href="https://www.twitch.tv/nicolasmeseguerr" class="link-dark" target="_blank">Twitch</a>
-										
-										</br>
-
-										<span class="lucida-console small">(<i class="fa-light fa-share-from-square"></i> <a href="https://www.youtube.com/@NicolasMeseguerArchive" class="link-dark" target="_blank">YouTube Archive)</a>.</span>
-
-									</div> -->
-								<!-- </div> -->
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<!-- Education -->
-				<div class="col-md-8 offset-md-1 mb-5" id="educationContent">
-					<div class="container">
-						<div class="row mt-2 language">
-							<h2 
-								data-es="Doctorado en Arquitectura de Computadores"
-								data-en="Ph.D. in Computer Architecture"></h2>
-							<div class="trnsf-thin" 
-								data-es="(Universidad de Murcia, 2022-2026)" 
-								data-en="(University of Murcia, 2022-2026)"></div>
-
-							<p class="mt-1 justify"
-								data-en="
-								The design of the memory system is a key component of any computer architecture, and it is much more crucial in the heterogeneous architectures that are emerging as a result of Moore's Law slowing.
-
-								Although memory hierarchies in general-purpose architectures have been extensively explored over the years, domain-specific accelerators have restrictions that introduces variances in some essential features. Furthermore, as the computational capability of these heterogeneous architectures grows, so does the requirement to be able to retrieve data with which to operate, increasing the pressure on the design of the memory system.
-
-								The overarching goal of this work is to suggest approaches for addressing two transcendental concerns in the design of a heterogeneous processor's memory system. On the one hand, novel organizations for the memory structures employed by cores (considering deep learning accelerators in this case), through which it will be possible to respond to the requirement for ever-increasing bandwidth. On the other hand, we will investigate alternatives to present virtual memory concepts in order to more efficiently share the same memory space across general purpose cores and accelerators.
-								">
-								
-							</p>
-
-							<div class="trnsf-thin">
-								<span 
-									data-es="Tésis:"
-									data-en="Dissertation:">
-								</span>
-								<span class="trnsf-italic"
-									data-es="Por determinar (finales~2026)."
-									data-en="TBD (late~2026).">
-								</span>
-							</div>
-
-						</div>
-
-						<div class="row mt-3 language">
-							<h2 
-								data-es="Máster en Arquitecturas de Altas Prestaciones y Supercomputación"
-								data-en="M.S. in High Performance Architectures and Supercomputing"></h2>
-							<div class="trnsf-thin"
-								data-es="(Universidad de Murcia, 2021-2022) 9,24 - 60 ECTS"
-								data-en="(University of Murcia, 2021-2022) 9,24 - 60 ECTS">
-							</div>
-
-							<p class="mt-1 justify"
-								data-es="
-								Diseño de arquitecturas multinúcleo de alto rendimiento, incluyendo la microarquitectura de cada uno de los núcleos de procesamiento, las cachés y la red de interconexión.
-								Comprender los mecanismos a través de los cuales se puede lograr una comunicación eficiente entre los núcleos (el protocolo de coherencia de la caché).
-								Evaluar el impacto de las diferentes técnicas arquitectónicas en el rendimiento y el consumo de energía de las arquitecturas multinúcleo de alto rendimiento.
-								Estándares de programación paralela: paradigmas de memoria compartida (OpenMP) e interfaz de paso de mensajes (MPI) + paradigmas híbridos (como MPI+OpenMP y OpenMP+CUDA).
-								Nociones de programación paralela, algoritmos y bibliotecas matriciales eficientes en sistemas de alto rendimiento (BLAS, Intel MKL, cuBLAS, ScaLAPACK).
-								Administración de sistemas de alto rendimiento (almacenamiento RAID, reglas de cortafuegos, protocolos de red, gestor de módulos, sistema de colas, arranque en red).
-								"
-
-								data-en="
-								Design high-performance multi-core architectures, including the microarchitecture of each of the processing cores, the caches and the interconnection network.
-								Understand the mechanisms through which efficient communication between cores can be achieved (the cache coherence protocol).
-								Assess the impact of different architectural techniques on the performance and power consumption of high-performance multi-core architectures.
-								Parallel programming standards: shared memory paradigms (OpenMP) and message passing interface (MPI) + hybrid paradigms (such as MPI+OpenMP and OpenMP+CUDA).
-								Notions of parallel programming and efficient matrix algorithms and libraries in high-performance systems (BLAS, Intel MKL, cuBLAS, ScaLAPACK).
-								High performance system administration (RAID storage, firewall rules, network protocols, module manager, queuing system, network boot).
-								">
-								
-							</p>
-
-							<div class="trnsf-thin">
-								<span
-									data-es="TFM:"
-									data-en="Thesis:">
-								</span>
-								<span class="trnsf-italic">
-									<a href="./assets/documents/dissertations/NICOLASMESEGUER_CPU-PCGCN_efficient_processing_of_graph_convolutional_networks_on_CPU_architectures.pdf" class="link-dark" target="_blank"
-									data-es="CPU-PCGCN, procesamiento eficiente de redes convolucionales grafos en arquitecturas CPU."
-									data-en="CPU-PCGCN, efficient processing of graph convolutional networks on CPU architectures.">
-								</a>
-								</span>
-							</div>
-							<div class="trnsf-thin">
-								<span
-									data-es="[encuentra el repositorio"
-									data-en="[find the repository">
-								</span>
-								<a href="https://github.com/NicolasMeseguer/pcgcn" class="link-dark" target="_blank" 
-									data-es="aquí]"
-									data-en="here]">
-								</a>
-							</div>
-
-						</div>
-
-						<div class="row mt-3 language">
-							<h2 
-								data-es="Alumno Interno, Machine Learning y Deep Learning"
-								data-en="Intern Student, Machine Learning and Deep Learning">
-							</h2>
-							<div class="trnsf-thin" 
-								data-es="(Univerisdad Católica de Murcia, 2019-2020) - 12 ECTS" 
-								data-en="(Catholic University of Murcia, 2019-2020) - 12 ECTS">
-							</div>
-
-							<p class="mt-1 justify" 
-								data-es="
-								Introducción a Machine Learning (ML) y a las nociones que sustentan el cálculo de diferentes modelos de Deep Neural Networks (DNNs), como MLPs, CNNs o RNNs.
-								Durante mi estancia de prácticas, desarrollé una red neuronal completamente conectada (FC) y una convolucional (CNN) en C, mejorando la eficiencia de la caché (memoria dinámica, punteros, registros de memoria) y las operaciones matriciales para acelerar el cálculo. 
-								Esta aplicación se distribuye abiertamente a la comunidad científica; es totalmente modular y fácil de usar.
-								"
-
-								data-en="
-								Introduction to Machine Learning (ML) and the notions underpinning the computation of different Deep Neural Networks (DNNs) models, such as MLPs, CNNs, or RNNs.
-								During my time as an intern student, I developed a fully connected (FC) and a convolutional neural network (CNN) in C, improving cache efficency (dynamic memory, pointers, memory registers) and matrix operations to speed up the calculation. 
-								This application is openly distributed to the scientific commmunity; it is totally modular and user-friendly.
-								">
-							</p>
-
-							<div class="trnsf-thin">
-								<span
-									data-es="[encuentra la aplicación"
-									data-en="[find the application">
-								</span>
-								<a href="https://github.com/NicolasMeseguer/DNN" class="link-dark" target="_blank" 
-									data-es="aquí]"
-									data-en="here]">
-								</a>
-							</div>
-
-						</div>
-
-						<div class="row mt-3 language">
-							<h2 
-								data-es="(Honorífico) Grado en Ingeniería Informática"
-								data-en="(Hons) B.S. in Computer Engineering">
-							</h2>
-							<div class="trnsf-thin" 
-								data-es="(Univerisdad Católica de Murcia, 2018-2021) 9,3 - 240 ECTS" 
-								data-en="(Catholic University of Murcia, 2018-2021) 9,3 - 240 ECTS">
-							</div>
-
-							<p class="mt-1 justify"
-								data-es="
-								Estructuras de datos (pilas, colas, listas, grafos), algoritmos (ordenación, hashing, backtracking), 
-								bases de datos (relacionales y no relacionales), programación paralela (OMP y CUDA), 
-								arquitectura de ordenadores (MIPS, modelo Von Neumann, segmentación, multiciclo y monociclo), 
-								cálculo y álgebra lineal, redes, sistemas operativos y seguridad informática (curso CISCO), 
-								metodologías ágiles e ingeniería del software, programación visual avanzada, sistemas inteligentes (Python), 
-								apps móviles nativas y apps web progresivas, etc."
-
-								data-en="
-								Data structures (stacks, queues, lists, graphs), algorithms (sorting, hashing, backtracking), 
-								databases (relational and no relational), parallel programming (OMP and CUDA), 
-								computer architecture (MIPS, Von Neumann model, segmentation, multicycle and monocycle), 
-								calculus and linear algebra, networks, operating systems and computer security (CISCO course), 
-								agile methodologies and software engineering, advanced visual programming, smart systems (Python), 
-								native mobile apps and progressive web apps, etc.">
-								
-							</p>
-
-							<div class="trnsf-thin">
-								<span
-									data-es="TFG:"
-									data-en="Thesis:">
-								</span>
-								<span class="trnsf-italic">
-									<a href="./assets/documents/dissertations/NICOLASMESEGUER_Implementation_and_evaluation_of_the_DLRM_model_in_an_ASIC_accelerator_simulated_by_STONNE.pdf" class="link-dark" target="_blank"
-									data-es="Implementación y evaluación del modelo DLRM en un acelerador ASIC simulado por STONNE"
-									data-en="Implementation and evaluation of the DLRM model in an ASIC accelerator simulated by STONNE.">
-								</a>
-								</span>
-							</div>
-
-						</div>
-
-						<div class="row mt-3 language">
-							<h2 
-								data-es="Grado Superior en Desarrollo de Aplicaciones Web"
-								data-en="HNC Web App Developer">
-							</h2>
-							<div class="trnsf-thin">(IES José Planes, 2016-2018) 8,8 - 120 ECTS </div>
-
-							<p class="mt-1 justify"
-
-								data-es="Desarrollar, implementar y mantener aplicaciones web (enfoque MVC), 
-								independientemente del modelo utilizado y utilizando tecnologías específicas (Laravel, Symfony, Java, React.js o Node.js), 
-								garantizando el acceso seguro a los datos (MySQL, XML o Ajax) y cumpliendo los criterios de accesibilidad, 
-								usabilidad y calidad (Doctrine2, Ruby, SASS, Compass) exigidos por los estándares establecidos."
-
-								data-en="Developing, implementing and maintaining web applications (MVC approach), 
-								irrespective of the model used and using specific technologies (Laravel, Symfony, Java, React.js or Node.js), 
-								guaranteeing secure access to data (MySQL, XML or Ajax) and complying with the accessibility, 
-								usability and quality criteria (Doctrine2, Ruby, SASS, Compass) required by established standards.">
-							</p>
-
-						</div>
-					</div>
-				</div>
-				
-				<!-- Publications -->
-				<div class="col-md-8 offset-md-1 mb-5" id="publicationsContent">
-					<div class="container">
-
-						<div class="row mt-3">
-							<h2 class="pub-year-h2">2023</h2>
-
-							<div class="pub-block">
-								<div class="lucida-console h5">Unveiling Energy Efficiency in Deep Learning: Measurement, Prediction, and Scoring across Edge Devices</div>
-								<div class="pub-authors mt-1"><span class="pub-author">Xiaolong Tu</span>, A Mallik, D Chen, K Han, O Altintas, H Wang, J Xie</div>
-								<div class="pub-congress">The Eighth ACM/IEEE Symposium on Edge Computing (SEC)</div>
-								<div class="mt-1">
-									<span> <i class="far fa-file-pdf"></i> <a href="/assets/documents/publications/SEC2023_ACM.pdf" target="_blank" class="link-dark ">PDF</a> </span>
-									<span class="pub-force-margin-left"> <i class="fas fa-quote-left"></i> <a href="#" id="citation" class="link-dark">BibTeX</a> </span>
-								</div>
-								<div class="d-none">
-									@article{tu2023unveiling,
-										title={Unveiling Energy Efficiency in Deep Learning: Measurement, Prediction, and Scoring across Edge Devices},
-										author={Tu, Xiaolong and Mallik, Anik and Chen, Dawei and Han, Kyungtae and Altintas, Onur and Wang, Haoxin and Xie, Jiang},
-										journal={arXiv preprint arXiv:2310.18329},
-										year={2023}
-									  }
-								</div>
-							</div>
-							<hr>
-
-							<div class="pub-block">
-								<div class="lucida-console h5">DeepEn2023: Energy Datasets for Edge Artificial Intelligence</div>
-								<div class="pub-authors mt-1"><span class="pub-author">Xiaolong Tu</span>, Anik Mallik, Haoxin Wang, Jiang Xie</div>
-								<div class="pub-congress">NeurIPS 2023 TCCML workshop</div>
-								<div class="mt-1">
-									<span> <i class="far fa-file-pdf"></i> <a href="/assets/documents/publications/DeepEn2023, Energy Datasets for Edge Artificial Intelligence (camera ready).pdf" target="_blank" class="link-dark ">PDF</a> </span>
-									<span class="pub-force-margin-left"> <i class="fas fa-quote-left"></i> <a href="#" id="citation" class="link-dark">BibTeX</a> </span>
-								</div>
-								<div class="d-none">
-										@article{tu2023deepen2023,
-											title={DeepEn2023: Energy Datasets for Edge Artificial Intelligence},
-											author={Tu, Xiaolong and Mallik, Anik and Wang, Haoxin and Xie, Jiang},
-											journal={arXiv preprint arXiv:2312.00103},
-											year={2023}
-										  }
-								</div>
-							</div>
-							<hr>
-
-							<div class="pub-block">
-								<div class="lucida-console h5">Visualization of Mobility Digital Twin: Framework Design, Case Study, and Future Challenges</div>
-								<div class="pub-authors mt-1"> Yueyang Liu,<span class="pub-author">Xiaolong Tu</span>, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang, Jiang Xie</div>
-								<div class="pub-congress">2023 IEEE 20th International Conference on Mobile Ad Hoc and Smart Systems (MASS)</div>
-								<div class="mt-1">
-									<!-- <span> <i class="far fa-file-pdf"></i> <a href="/assets/documents/publications/DeepEn2023, Energy Datasets for Edge Artificial Intelligence (camera ready).pdf" target="_blank" class="link-dark ">PDF</a> </span> -->
-									<span class="pub-force-margin-left"> <i class="fas fa-quote-left"></i> <a href="#" id="citation" class="link-dark">BibTeX</a> </span>
-								</div>
-								<div class="d-none">
-										@inproceedings{liu2023visualization,
-											title={Visualization of Mobility Digital Twin: Framework Design, Case Study, and Future Challenges},
-											author={Liu, Yueyang and Tu, Xiaolong and Chen, Dawei and Han, Kyungtae and Altintas, Onur and Wang, Haoxin and Xie, Jiang},
-											booktitle={2023 IEEE 20th International Conference on Mobile Ad Hoc and Smart Systems (MASS)},
-											pages={170--177},
-											year={2023},
-											organization={IEEE}
-										  }
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>	
-				
-				
-				<!-- Blog -->
-				<div class="col-md-8 offset-md-1 mb-5" id="tutorialsContent">
-					<div class="container">
-
-						<div class="clickable mt-4 language">
-							<div class="d-none">https://nicolasmeseguer.notion.site/StreaMemory-Benchmark-35739f7f69404274a1d287f6827ef203</div>
-							<div class="h5">⛲ StreaMemory Benchmark</div>
-							<div class="blog-info mt-2">
-								<div class="d-inline">
-									<i class="fa-light fa-hourglass-clock" aria-hidden="true"></i> 25 min
-								</div>
-
-								<div class="float-end d-inline">
-									<i class="fa-light fa-calendar" aria-hidden="true"></i> 11 feb. 2022
-								</div>
-							</div>
-
-							<div class="blog-short mt-2" 
-								data-es="Explicación del Stream + Memory benchmark en MGPUSim y los archivos que he tenido que modificar para lograrlo."
-								data-en="Explanation of the Stream + Memory benchmark in MGPUSim and the files I had to modify to achieve it.">
-							</div>
-
-							<div class="blog-tags mt-1">
-								<span class="tag t-sky">#benchmark</span> <span class="tag t-sky">#mgpusim</span> <span class="tag t-sky">#akita</span>
-							</div>
-						</div>
-
-						<div class="clickable mt-4 language">
-							<div class="d-none">https://nicolasmeseguer.notion.site/Elementwise-2D-546f8fe9a8a24852a234bdc28b00cd15</div>
-							<div class="h5">🧊 Elementwise 2D Tensor</div>
-							<div class="blog-info mt-2">
-								<div class="d-inline">
-									<i class="fa-light fa-hourglass-clock" aria-hidden="true"></i> 10 min
-								</div>
-
-								<div class="float-end d-inline">
-									<i class="fa-light fa-calendar" aria-hidden="true"></i> 12 dec. 2022
-								</div>
-							</div>
-
-							<div class="blog-short mt-2" 
-								data-es="Explicación de element-wise para un tensor doble (2D) y un caso práctico de porqué no usar tamaños aleatorios para el tamaño de la matriz."
-								data-en="Explanation of element-wise for a double (2D) tensor and a case study of why not to use random sizes for matrix size.">
-							</div>
-
-							<div class="blog-tags mt-1">
-								<span class="tag t-sky">#mgpusim</span> <span class="tag t-sky">#akita</span>
-							</div>
-						</div>
-
-						<div class="clickable mt-4 language">
-							<div class="d-none">https://nicolasmeseguer.notion.site/Tracing-LDS-Unit-69210a9d8fe44b4a997f8391aa508621</div>
-							<div class="h5">🛤️ Tracing LDS Unit</div>
-							<div class="blog-info mt-2">
-								<div class="d-inline">
-									<i class="fa-light fa-hourglass-clock" aria-hidden="true"></i> 20 min
-								</div>
-
-								<div class="float-end d-inline">
-									<i class="fa-light fa-calendar" aria-hidden="true"></i> 30 nov. 2022
-								</div>
-							</div>
-
-							<div class="blog-short mt-2"
-								data-es="¿Alguna vez has querido adjuntar un tracer a un componente específico dentro de MGPUSim? Incluso si ese 'componente' no es un componente como tal, sino un subcomponente de un componente. Este tutorial te será útil."
-								data-en="Have you ever wanted to attach a tracer to a specific component inside MGPUSim? Even if that 'component' is not a component itself but a subcomponent of a component. This tutorial will be helpful.">
-							</div>
-
-							<div class="blog-tags mt-1">
-								<span class="tag t-sky">#mgpusim</span> <span class="tag t-sky">#akita</span> <span class="tag t-sky">#tracing</span>
-							</div>
-						</div>
-
-						<div class="clickable mt-4 language">
-							<div class="d-none">https://nicolasmeseguer.notion.site/DAISEN-Tutorial-9d041575a9b0489099086152fd9a927e</div>
-							<div class="h5">📊 DAISEN Tutorial</div>
-							<div class="blog-info mt-2">
-								<div class="d-inline">
-									<i class="fa-light fa-hourglass-clock" aria-hidden="true"></i> 15 min
-								</div>
-
-								<div class="float-end d-inline">
-									<i class="fa-light fa-calendar" aria-hidden="true"></i> 15 nov. 2022
-								</div>
-							</div>
-
-							<div class="blog-short mt-2" 
-								data-es="Breve tutorial sobre la herramienta de visualización DAISEN utilizada para MGPUSim. Este tutorial viene acompañado con un kernel de referencia."
-								data-en="Brief tutorial about the visualization tool DAISEN used for MGPUSim. This tutorial comes along with a kernel example.">
-							</div>
-
-							<div class="blog-tags mt-1">
-								<span class="tag t-sky">#mgpusim</span> <span class="tag t-sky">#akita</span> <span class="tag t-sky">#daisen</span>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-
-				<!-- Teaching -->
-				<div class="col-md-8 offset-md-1 mb-5" id="academicContent">
-					<div class="container ">
-						<div class="row mt-2">
-							<h2 class="academic-year-h2">2023</h2>
-
-							<div class="academic-block">
-								<div class="lucida-console h5 academic-name language"> <span data-en="Introduction to Operating Systems" data-es="Introducción a Sistemas Operativos (ISO)"></span></div>
-								<div class="academic-rol mt-1 language"><span data-en="Teaching Assistant" data-es="Profesor de Prácticas"></span></div>
-								<div class="academic-year language">3.00 ECTS. <span data-en="September 2023 - January 2024" data-es="Septiembre 2023 - Enero 2024"></span></div>
-							</div>
-
-							<div class="academic-block mt-4">
-								<div class="lucida-console h5 academic-name language"> <span data-en="Multi-core and Purpose-built Architectures" data-es="Arquitecturas Multinúcleo y de Propósito Específico (AMPE)"></span></div>
-								<div class="academic-rol mt-1 language"><span data-en="Teaching Assistant" data-es="Profesor de Prácticas"></span></div>
-								<div class="academic-year language">3.00 ECTS. <span data-en="February 2023 - June 2023" data-es="Febrero 2023 - Junio 2023"></span></div>
-								<div class="mt-1"><a href="https://twitter.com/AMPE_UMU" target="_blank" class="link-dark"><i class="fa-brands fa-twitter"></i></a></div>
-							</div>
-						</div>
-
-						<div class="row mt-4 language">
-							<h2 class="student-h2" data-es="Alumnos" data-en="Students"></h2>
-
-							<div class="student-block">
-								<div class="student-name"> José Ángel Nicolás Ortega </div>
-								<div class="mt-1 language h5 lucida-console"><span data-en="Register Bank Modeling on GPUs with MGPUSim" data-es="Modelado del Banco de Registros en GPUs con MGPUSim"></span></div>
-								<div class="student-mark fireworks language">9.9 <span data-es="Sobresaliente - M. Honor" data-en="Outstanding - H.M."></span> </div>
-								<div class="mt-2 student-period"> <span data-en="September 2022 - June 2023" data-es="Septiembre 2022 - Junio 2023"></span> </div>
-						</div>
-
-					</div>
-				</div>
-
-				<!-- Clases particulares -->
-				<div class="col-md-12 mb-5" id="particularContent">
-					<div class="container language">
-						<h1 class="particular-h1 mb-3" data-es="La calidad siempre es prioritaria." data-en="Quality always goes first."></h1>
-						
-						<h4 class="particular-clickable">🧑 <span class="particular-h4"><span data-es="¿Quién es " data-en="Who's "></span><span class="particular-name">Xiaolong Tu</span>?</span></h4>
-						<div class="container">
-							<div class="row mb-4 align-middle align-items-center">
-								<div class="col-sm-0 col-md-4 col-lg-3">
-									<div>
-										<img src="assets/img/NicolasMeseguer.webp" alt="Xiaolong Tu" class="profilepicture-particular w-75 d-block">
-									</div>
-								</div>
-								<div class="col-md-8">
-									👋 ¡Hola a todos! A mis 25 años puedo afirmar rotúndamente que soy un apasionado de la informática y la enseñanza. He estado inmerso en el fascinante mundo de la tecnología desde que era un niño y desde entonces, he recorrido un largo camino académico y profesional.<br><br> Mi viaje comenzó con un Grado Superior en Desarrollo Web, seguido de un Grado en Ingeniería Informática en la UCAM, y luego un Máster en Nuevas Tecnologías en Informática en la Universidad de Murcia.<br><br> Actualmente, estoy trabajando en mi doctorado, mientras tengo el privilegio de dar clases en la Universidad de Murcia.
-								</div>
-							</div>
-							<div>
-								En mi experiencia docente, he encontrado que cada estudiante es único y merece un <span class="underline">enfoque de enseñanza personalizado</span> que se ajuste a sus propias necesidades y ritmo de aprendizaje. Por ello, mi objetivo principal es brindar una enseñanza de calidad y adaptada a cada uno de mis alumnos, con posibilidad de <span class="underline">enseñanza en Inglés y Castellano</span>. Estos son algunos de mis enfoques de enseñanza:
-								<br><br>
-								<ol>
-									<li><b>Apoyo constante</b>: Estoy disponible para resolver dudas o proporcionar ayuda adicional cuando sea necesario. Creo que la comunicación abierta y regular es clave para un aprendizaje efectivo. 📞</li>
-									<li><b>Herramientas innovadoras</b>: Utilizo herramientas de última generación para facilitar el aprendizaje y hacer que incluso los conceptos más complejos sean comprensibles. Uso de tabletas para ilustrar ideas, software colaborativo para trabajar en tiempo real, o proporcionar materiales de estudio personalizados. 💻📚</li>
-									<li><b>Paciencia y comprensión</b>: Entiendo que todos aprendemos a nuestro propio ritmo. Por lo tanto, mi enfoque es siempre paciente y alentador, asegurándome de que cada concepto se comprenda completamente antes de pasar al siguiente. 🤗</li>
-								</ol>
-							</div>
-						</div>
-
-						<h4 class="particular-clickable">💼 <span class="particular-h4" data-es="Experiencia previa" data-en="Previous experience"></span></h4>
-						<div>
-							<p>
-								Siempre he sido un apasionado de la informática. Mi historia con los ordenadores y la programación comenzó desde muy pequeño pero se puso en serio cuando me lancé a estudiar un <span class="underline">Grado Superior</span> de Desarrollo Web. No solo me encantó, sino que obtuve unas notas estupendas. Esto me abrió las puertas a una beca Erasmus+ para hacer prácticas en el extranjero. ¡Y sí, resulta que además de hablar informática, también hablo inglés bastante bien! 😂
-								<br><br>
-
-								Después de aquella experiencia, me sumergí en el <span class="underline">Grado en Ingeniería Informática</span> en la Universidad Católica San Antonio de Murcia (UCAM). Fueron años intensos y fascinantes en los que me llevé la sorpresa de mi vida al terminar con una media de 9.3 y, para mi asombro, ¡recibir el premio al mejor expediente de mi promoción! 🤯 (+26 matrículas de honor).
-								<br><br>
-								
-								Pero mi amor por la informática y la curiosidad por seguir aprendiendo no conocían límites, así que me lancé a por un <span class="underline">Máster en Nuevas Tecnologías en Informática</span> en la Universidad de Murcia. Durante este tiempo, tuve la suerte de trabajar codo con codo con el Barcelona Supercomputing Center (BSC) en mi Trabajo de Fin de Máster, que acabó con una calificación de 9.9. Durante esos años, también tuve la oportunidad de compartir mi pasión por la informática a través de dos artículos que publiqué en congresos nacionales.
-								<br><br>
-								
-								Hoy, gracias a una beca de la prestigiosa Fundación Séneca (¡y estoy muy orgulloso de ser uno de los cuatro seleccionados en toda la región!), estoy metido de lleno en mis <span class="underline">estudios de doctorado</span>. Y para redondear esta aventura, también tengo la increíble oportunidad de dar clases en la Universidad de Murcia, donde este año soy el profesor encargado de las prácticas de la asignatura Arquitecturas Multinúcleo y de Propósito Específico (AMPE). ¡Así que aquí estoy, listo para compartir todo lo que he aprendido en mi camino!
-							</p>
-						</div>
-
-						<h4 class="particular-clickable">🎓 <span class="particular-h4" data-es="Especializaciones y cursos" data-en="Specializations and courses"></span></h4>
-						<div>
-							<p>
-								Con mi amplia formación y experiencia, puedo ayudar a estudiantes de todas las edades y niveles, desde la primaria hasta la universidad. Aquí tienes una idea de las áreas en las que me especializo:
-
-								<ol>
-									<li><b>Informática básica</b>: Desde cómo utilizar un ordenador, navegación por internet, hasta seguridad informática básica, puedo ayudar a los más jóvenes a familiarizarse y desenvolverse en el mundo digital. 🖥️</li>
-									<li><b>Programación y desarrollo web</b>: ¿Estás interesado en aprender a programar o a crear tu propia página web? Puedo enseñar desde los fundamentos de la programación hasta los lenguajes más avanzados, y orientar en el diseño y desarrollo de sitios web. 💻🌐</li>
-									<li><b>Asignaturas universitarias de informática</b>: Si estás cursando un Grado o Máster en Informática y necesitas ayuda extra, puedo ofrecer soporte en asignaturas de computación, arquitectura, sistemas operativos, entre otras. 🎓🔬</li>
-									<li><b>Inglés Técnico</b>: Gracias a mi experiencia estudiando y trabajando en el extranjero, puedo ayudarte a mejorar tu inglés técnico y académico, una habilidad esencial en el mundo de la informática y la tecnología. 🌍🗣️</li>
-								</ol>
-
-								Mi enfoque es siempre adaptar las lecciones a las necesidades específicas de cada estudiante. Así que <span class="underline">si tienes una solicitud especial, no dudes en comunicarte conmigo</span>, estaré encantado de atender tus necesidades o las de tu hijo. 🤝
-							</p>
-						</div>
-
-						<h4 class="particular-clickable">📚 <span class="particular-h4" data-es="Material didáctico" data-en="Educational materials"></span></h4>
-						<div>
-							<p>
-								Una de las cosas que realmente diferencia mis clases de las de otras academias o profesores particulares es el enfoque práctico y colaborativo que utilizo. Para asegurarme de que mis alumnos realmente comprendan y apliquen lo que aprenden, hago uso de una variedad de herramientas didácticas y tecnológicas:
-								
-								<ol>
-									<li><b>Tableta e iPad</b>: Utilizo mi tableta y iPad para dibujar y explicar conceptos en tiempo real durante las clases. Esto significa que tendrás una explicación visual clara de lo que estoy enseñando, lo que facilitará la comprensión y retención. 🎨📱</li>
-									<li><b>Programas de dibujo</b>: Domino una serie de programas de dibujo que me permiten ilustrar ideas y conceptos de una manera fácil de entender. Así, los alumnos pueden visualizar exactamente lo que estamos discutiendo y cómo se aplica. 🖌️💡</li>
-									<li><b>Herramientas colaborativas</b>: Utilizo herramientas como Miro y Draw.io, que permiten a los alumnos participar y colaborar en tiempo real. Esto significa que no solo verán lo que hago, sino que también tendrán la oportunidad de participar proactivamente y aprender haciendo. 🔄🎲</li>
-								</ol>
-
-								El uso de estas herramientas modernas y colaborativas permite a los alumnos experimentar un aprendizaje interactivo y atractivo que no solo los ayudará a entender los conceptos, sino que también les dará las habilidades prácticas que necesitarán en el mundo real.
-								<br><br>
-								¡El objetivo siempre es proporcionar una enseñanza de la más alta calidad y hacer del aprendizaje una experiencia agradable y valiosa! 🌟🚀
-							</p>
-						</div>
-
-						<h4 class="particular-clickable">💰 <span class="particular-h4" data-es="Precio hora" data-en="Price per hour"></span></h4>
-						<div>
-							<p>
-								Entiendo que la calidad de la educación es una inversión importante para el futuro. Mi enfoque siempre ha sido proporcionar un servicio excepcional que supere las expectativas y justifique cada euro invertido.
-								<br><br>
-
-								El precio establecido es de <b>20 euros/hora</b>. Este precio refleja la calidad de la enseñanza que ofrezco, incluyendo mi amplia experiencia, mi enfoque personalizado y la utilización de herramientas de aprendizaje interactivas y modernas.
-								<br><br>
-
-								Para mayor comodidad, acepto varios métodos de pago, incluyendo <span class="underline">Bizum</span>, <span class="underline">Transferencia Bancaria</span> y <span class="underline">PayPal</span>. Quiero hacer que el proceso sea lo más sencillo y sin complicaciones posible para ti.
-								<br><br>
-
-								Al final, no solo estás pagando por un tutor, sino por una experiencia educativa de alta calidad, una que te brindará de las herramientas y la confianza que necesita para tener éxito en tu carrera académica y/o profesional. 🎯💎
-							</p>
-						</div>
-
-						<h4 class="particular-clickable">❓ <span class="particular-h4" data-es="Preguntas Frecuentes" data-en="FAQ"></span></h4>
-						<div>
-							<p>
-								<ol>
-									<li><b>¿Se puede adaptar al horario de mi hijo?</b>: Sé lo ocupadas que pueden llegar a ser las vidas de los estudiantes, por lo que ofrezco un horario flexible y adaptable a tus necesidades. ⏰🔄</li>
-									<li><b>Si una clase se cancela, ¿qué pasa?</b>: Entiendo que los imprevistos pueden surgir. Si necesitas cancelar una clase, buscaremos juntos otro horario que se acomode. La meta siempre es no perder la oportunidad de aprender y crecer. 🔄📅</li>
-									<li><b>¿Qué métodos de pago aceptas?</b>: Para hacer que el proceso sea lo más conveniente posible, acepto varios métodos de pago, incluyendo Bizum, transferencia bancaria y PayPal. 💰💳</li>
-									<li><b>¿Qué garantiza que la enseñanza será de alta calidad?</b>: Mi experiencia académica y profesional hablan por sí mismas. Además, me dedico a usar herramientas y técnicas de enseñanza modernas y efectivas para asegurar el mejor aprendizaje posible. 🎯🌟</li>
-								</ol>
-
-								Si tienes alguna otra pregunta que no haya sido respondida aquí, por favor no dudes en ponerte en contacto conmigo. Estoy aquí para ayudarte y asegurarme de que recibas la mejor educación posible. 🤝💡
-							</p>
-						</div>
-
-						<h4 class="particular-clickable">📞 <span class="particular-h4" data-es="Contacto" data-en="Contact"></span></h4>
-						<div>
-							<p>
-								¡Si tienes alguna pregunta, necesitas más información, o te gustaría programar una clase inicial, no dudes en ponerte en contacto conmigo!
-								<br><br>
-								
-								Puedes enviarme un mensaje a mi dirección de correo electrónico de trabajo: 📧 <a href="mailto:n.mesegueriborra@um.es" class="link-dark">n.mesegueriborra@um.es</a>.
-								<br><br>
-
-								Si prefieres usar WhatsApp, también puedes enviarme un mensaje al siguiente número: <span class="underline">+34 ??? ?? ?? ??</span>. Por favor, ten en cuenta que este número sólo está disponible para mensajes de WhatsApp. 📱
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-				<!-- Conferences -->
-				<div class="col-md-8 offset-md-1 mb-5" id="conferencesContent">
-					<div class="container language">
-						⚠️ 
-						<span 
-							data-es="Estamos trabajando en ello..."
-							data-en="Work in progress...">
-						</span>
-						⏱️
-						</div>
-				</div>
-
-				<!-- Projects -->
-				<div class="col-md-8 offset-md-1" id="projectsContent">
-					<div class="container language">
-						⚠️ 
-						<span 
-							data-es="Estamos trabajando en ello..."
-							data-en="Work in progress...">
-						</span>
-						⏱️
-						</div>
-				</div>
-
-
-			</div>
-		</div>
-
-
-		<!-- Scripts -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-		<script src="assets/js/main.js"></script>
-	</body>
-
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xiaolong Tu — Energy-efficient on-device AI</title>
+<meta name="description" content="Xiaolong Tu is a Ph.D. candidate in Computer Science at Georgia State University, working on energy measurement and efficiency for on-device deep learning and language models.">
+<meta name="author" content="Xiaolong Tu">
+<meta name="keywords" content="Xiaolong Tu, Georgia State University, AMAI Lab, edge AI, on-device LLM, energy efficiency, neural architecture search, mobile computing">
+<meta name="robots" content="index,follow">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Xiaolong Tu">
+<meta property="og:description" content="Ph.D. candidate at Georgia State University. I measure and reduce the energy cost of AI on phones and edge devices.">
+<meta property="og:url" content="https://xiaolong-shawn.github.io/Xiaolong.Tu/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" type="image/png" href="assets/img/AMAI-dark-mini.png">
+<link rel="alternate icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E6E62'/%3E%3Cpath d='M5 22h4l3-12 4 16 3-9 2 5h6' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LS62H88490"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LS62H88490');
+</script>
+
+<style>
+/* ---------- tokens ---------- */
+:root{
+  --paper:#E8EAE7;
+  --surface:#F5F7F4;
+  --ink:#1A2421;
+  --muted:#5C6B66;
+  --rule:#CBD1CC;
+  --signal:#0E6E62;
+  --amber:#9A6614;
+  --grid:rgba(26,36,33,.055);
+  --shadow:0 1px 0 rgba(26,36,33,.05);
+}
+html[data-theme="dark"]{
+  --paper:#121A18;
+  --surface:#1A2320;
+  --ink:#E5EAE7;
+  --muted:#8FA09A;
+  --rule:#2B3733;
+  --signal:#54C8B4;
+  --amber:#DFAA55;
+  --grid:rgba(229,234,231,.05);
+  --shadow:0 1px 0 rgba(0,0,0,.3);
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Inter Tight",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:17px;
+  line-height:1.6;
+  font-feature-settings:"tnum" 0;
+  -webkit-font-smoothing:antialiased;
+  transition:background-color .25s ease,color .25s ease;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.wrap{max-width:1060px;margin:0 auto;padding:0 28px}
+.prose{max-width:66ch}
+
+/* ---------- header ---------- */
+.top{
+  position:sticky;top:0;z-index:50;
+  background:var(--paper);
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.top-in{display:flex;align-items:center;gap:24px;height:58px}
+.mark{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:19px;font-weight:600;letter-spacing:.01em;
+  text-decoration:none;margin-right:auto;white-space:nowrap;
+}
+.mark span{color:var(--signal)}
+.nav{display:flex;gap:22px;align-items:center}
+.nav a{
+  text-decoration:none;color:var(--muted);font-size:14.5px;
+  padding:4px 0;border-bottom:1px solid transparent;
+}
+.nav a:hover,.nav a:focus-visible{color:var(--ink);border-bottom-color:var(--signal)}
+.themebtn{
+  border:1px solid var(--rule);background:transparent;color:var(--muted);
+  width:32px;height:32px;border-radius:50%;cursor:pointer;
+  display:grid;place-items:center;padding:0;flex:none;
+}
+.themebtn:hover{color:var(--ink);border-color:var(--signal)}
+.themebtn svg{width:15px;height:15px}
+html[data-theme="dark"] .i-moon{display:none}
+html:not([data-theme="dark"]) .i-sun{display:none}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--rule);
+  background-image:
+    linear-gradient(var(--grid) 1px,transparent 1px),
+    linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:34px 34px;
+}
+.hero-in{padding:76px 0 0;display:grid;grid-template-columns:1fr auto;gap:56px;align-items:start}
+h1{
+  font-family:"Newsreader",Georgia,serif;
+  font-weight:500;font-size:clamp(46px,8vw,82px);
+  line-height:1.02;letter-spacing:-.02em;margin:0 0 18px;
+}
+.hanzi{
+  font-size:20px;color:var(--muted);margin:-10px 0 20px;
+  letter-spacing:.22em;font-weight:400;
+}
+.role{font-size:19px;color:var(--muted);margin:0 0 26px;max-width:34ch}
+.role b{font-weight:500;color:var(--ink)}
+.statement{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:clamp(20px,2.4vw,25px);line-height:1.45;
+  max-width:24ch;margin:0 0 30px;font-weight:400;
+}
+.portrait{
+  width:180px;height:220px;object-fit:cover;
+  border:1px solid var(--rule);border-radius:2px;
+  filter:saturate(.92);background:var(--surface);
+}
+.portrait-fallback{
+  width:180px;height:220px;border:1px solid var(--rule);border-radius:2px;
+  background:var(--surface);display:grid;place-items:center;
+  font-family:"Newsreader",Georgia,serif;font-size:52px;color:var(--rule);
+}
+
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 46px;padding:0;list-style:none}
+.links a{
+  display:inline-flex;align-items:center;gap:7px;
+  text-decoration:none;font-size:14.5px;color:var(--ink);
+  border:1px solid var(--rule);background:var(--surface);
+  padding:7px 14px;border-radius:100px;box-shadow:var(--shadow);
+}
+.links a:hover,.links a:focus-visible{border-color:var(--signal);color:var(--signal)}
+.links svg{width:14px;height:14px;flex:none}
+.links a.primary{background:var(--signal);border-color:var(--signal);color:var(--paper)}
+.links a.primary:hover{opacity:.88;color:var(--paper)}
+
+.trace{display:block;width:100%;height:auto;margin-top:8px}
+.trace .line{
+  fill:none;stroke:var(--signal);stroke-width:1.6;
+  stroke-linejoin:round;stroke-linecap:round;
+  stroke-dasharray:1;stroke-dashoffset:1;
+  animation:draw 2.4s cubic-bezier(.6,0,.2,1) .35s forwards;
+}
+.trace .area{fill:var(--signal);opacity:0;animation:fadein 1.4s ease 1.6s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fadein{to{opacity:.07}}
+.caption{
+  font-size:12.5px;color:var(--muted);margin:2px 0 22px;
+  display:flex;justify-content:space-between;gap:16px;
+}
+
+/* ---------- sections ---------- */
+section{padding:64px 0;border-bottom:1px solid var(--rule)}
+h2{
+  font-family:"Newsreader",Georgia,serif;
+  font-size:31px;font-weight:500;letter-spacing:-.01em;
+  margin:0 0 28px;
+}
+h3{font-size:17px;font-weight:600;margin:0 0 6px;letter-spacing:-.005em}
+p{margin:0 0 16px}
+
+/* about */
+.about{display:grid;grid-template-columns:1.55fr 1fr;gap:56px;align-items:start}
+.facts{list-style:none;margin:0;padding:0;font-size:15px}
+.facts li{
+  display:grid;grid-template-columns:88px 1fr;gap:14px;
+  padding:11px 0;border-top:1px solid var(--rule);
+}
+.facts li:last-child{border-bottom:1px solid var(--rule)}
+.facts dt,.facts .k{color:var(--muted)}
+.prev{display:flex;flex-wrap:wrap;gap:6px}
+.prev span{
+  border:1px solid var(--rule);border-radius:3px;
+  padding:1px 7px;font-size:13px;background:var(--surface);
+}
+
+/* research */
+.themes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.theme{background:var(--paper);padding:26px 24px 28px}
+.theme .n{
+  font-size:13px;color:var(--signal);margin-bottom:12px;
+  display:flex;align-items:center;gap:8px;
+}
+.theme .n svg{width:17px;height:17px}
+.theme p{font-size:15px;color:var(--muted);margin:0}
+
+/* publications */
+.pub{
+  display:grid;grid-template-columns:72px 1fr;gap:24px;
+  padding:22px 0;border-top:1px solid var(--rule);
+}
+.pub:last-of-type{border-bottom:1px solid var(--rule)}
+.yr{
+  font-size:14px;color:var(--muted);padding-top:2px;
+  font-variant-numeric:tabular-nums;
+}
+.pub h3{font-size:17.5px;line-height:1.35;margin-bottom:7px}
+.authors{font-size:14.5px;color:var(--muted);margin:0 0 4px}
+.authors b{color:var(--ink);font-weight:600}
+.venue{font-size:14.5px;margin:0 0 12px;color:var(--muted)}
+.venue em{font-style:italic;color:var(--ink)}
+.badge{
+  display:inline-block;margin-left:8px;font-size:12.5px;
+  color:var(--amber);border:1px solid currentColor;border-radius:3px;
+  padding:0 6px;vertical-align:1px;
+}
+.acts{display:flex;flex-wrap:wrap;gap:16px;align-items:center;font-size:14px}
+.acts a,.acts summary{color:var(--signal);text-decoration:none;border-bottom:1px solid transparent;cursor:pointer}
+.acts a:hover,.acts summary:hover{border-bottom-color:currentColor}
+details{font-size:14px}
+details summary{list-style:none;display:inline-block}
+details summary::-webkit-details-marker{display:none}
+details[open] summary{color:var(--muted)}
+pre{
+  margin:12px 0 0;padding:14px 16px;overflow-x:auto;
+  background:var(--surface);border:1px solid var(--rule);border-radius:3px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:12.5px;line-height:1.55;color:var(--muted);white-space:pre;
+}
+
+/* news */
+.news{list-style:none;margin:0;padding:0}
+.news li{
+  display:grid;grid-template-columns:110px 1fr;gap:24px;
+  padding:14px 0;border-top:1px solid var(--rule);font-size:15.5px;
+}
+.news li:last-child{border-bottom:1px solid var(--rule)}
+.news .when{color:var(--muted);font-size:14px;padding-top:2px}
+.news a{color:var(--signal);text-decoration:none;border-bottom:1px solid transparent}
+.news a:hover{border-bottom-color:currentColor}
+
+/* footer */
+footer{padding:56px 0 64px}
+.foot{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:end}
+.mail{
+  font-family:"Newsreader",Georgia,serif;font-size:clamp(24px,4vw,36px);
+  text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:3px;
+}
+.mail:hover{border-bottom-color:var(--signal);color:var(--signal)}
+.fine{font-size:13.5px;color:var(--muted);text-align:right}
+
+/* a11y */
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:20px;top:12px;z-index:99;background:var(--signal);color:var(--paper);padding:8px 14px;border-radius:4px}
+
+@media (prefers-reduced-motion:reduce){
+  .trace .line{animation:none;stroke-dashoffset:0}
+  .trace .area{animation:none;opacity:.07}
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+
+@media (max-width:860px){
+  .hero-in{grid-template-columns:1fr;gap:32px;padding-top:52px}
+  .portrait,.portrait-fallback{width:132px;height:162px}
+  .about{grid-template-columns:1fr;gap:36px}
+  .themes{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .nav{gap:16px}
+  .nav a.hide-sm{display:none}
+  section{padding:48px 0}
+  .pub{grid-template-columns:1fr;gap:8px}
+  .yr{padding-top:0}
+  .news li{grid-template-columns:1fr;gap:2px}
+  .facts li{grid-template-columns:80px 1fr;gap:10px}
+  .caption{flex-direction:column;gap:2px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="#top">Xiaolong <span>Tu</span></a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#research" class="hide-sm">Research</a>
+      <a href="#publications">Papers</a>
+      <a href="#news" class="hide-sm">News</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="themebtn" id="themebtn" type="button" aria-label="Switch colour theme">
+      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<div class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <h1>Xiaolong Tu</h1>
+      <p class="hanzi" lang="zh-Hans">涂小龙</p>
+      <p class="role">Ph.D. candidate in Computer Science at <b>Georgia State University</b>, in the AMAI Lab.</p>
+      <p class="statement">I measure what artificial intelligence costs in joules — and then make it cost less.</p>
+      <ul class="links">
+        <li><a class="primary" href="./assets/documents/CV_xiaolong.pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+          Curriculum vitae</a></li>
+        <li><a href="mailto:xtu1@gsu.edu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+          xtu1@gsu.edu</a></li>
+        <li><a href="https://scholar.google.com/citations?user=8gENWR0AAAAJ&amp;hl=en">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L1.5 8.5 12 14l10.5-5.5L12 3z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+          Google Scholar</a></li>
+        <li><a href="https://github.com/xiaolong-shawn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5a10.5 10.5 0 00-3.32 20.47c.53.1.72-.23.72-.5v-1.8c-2.92.64-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.55-1.17-1.55-.96-.65.07-.64.07-.64 1.06.08 1.62 1.09 1.62 1.09.94 1.62 2.47 1.15 3.07.88.1-.68.37-1.15.67-1.42-2.33-.26-4.79-1.17-4.79-5.2 0-1.15.41-2.09 1.09-2.83-.11-.27-.47-1.34.1-2.79 0 0 .88-.28 2.9 1.08a10 10 0 015.28 0c2.01-1.36 2.9-1.08 2.9-1.08.57 1.45.21 2.52.1 2.79.68.74 1.09 1.68 1.09 2.83 0 4.04-2.47 4.93-4.82 5.19.38.33.72.97.72 1.96v2.9c0 .28.19.61.73.5A10.5 10.5 0 0012 1.5z"/></svg>
+          GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/xiaolong-tu-96562ba5/">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C21.4 8.75 22 11 22 14.1V21h-4v-6.1c0-1.46-.03-3.34-2.06-3.34-2.06 0-2.38 1.58-2.38 3.23V21h-3.9z"/></svg>
+          LinkedIn</a></li>
+      </ul>
+    </div>
+    <img class="portrait" id="portrait" src="./assets/img/Xiaolong%20Tu.JPG" alt="Portrait of Xiaolong Tu">
+  </div>
+
+  <div class="wrap">
+    <svg class="trace" viewBox="0 0 1200 130" preserveAspectRatio="none" role="img" aria-label="A power-draw waveform">
+      <path class="area" d="M0,96 L40,96 L46,58 L52,72 L58,40 L66,88 L74,92 L96,92 L104,34 L110,50 L118,28 L126,66 L134,90 L160,90 L168,62 L176,74 L184,44 L192,86 L214,88 L222,30 L230,46 L238,22 L246,60 L254,88 L286,90 L294,70 L302,80 L310,52 L318,86 L344,88 L352,38 L360,54 L368,26 L376,64 L384,90 L416,92 L424,66 L432,78 L440,48 L448,88 L474,90 L482,32 L490,48 L498,24 L506,62 L514,90 L546,92 L554,72 L562,82 L570,56 L578,88 L604,90 L612,36 L620,52 L628,30 L636,68 L644,90 L676,92 L684,68 L692,80 L700,50 L708,88 L734,90 L742,34 L750,50 L758,26 L766,64 L774,90 L806,92 L814,70 L822,82 L830,54 L838,88 L864,90 L872,40 L880,56 L888,28 L896,66 L904,90 L936,92 L944,66 L952,78 L960,46 L968,88 L994,90 L1002,32 L1010,48 L1018,22 L1026,60 L1034,90 L1066,92 L1074,72 L1082,84 L1090,58 L1098,88 L1124,90 L1132,38 L1140,54 L1148,30 L1156,68 L1164,90 L1200,92 L1200,110 L0,110 Z"/>
+      <path class="line" pathLength="1" d="M0,96 L40,96 L46,58 L52,72 L58,40 L66,88 L74,92 L96,92 L104,34 L110,50 L118,28 L126,66 L134,90 L160,90 L168,62 L176,74 L184,44 L192,86 L214,88 L222,30 L230,46 L238,22 L246,60 L254,88 L286,90 L294,70 L302,80 L310,52 L318,86 L344,88 L352,38 L360,54 L368,26 L376,64 L384,90 L416,92 L424,66 L432,78 L440,48 L448,88 L474,90 L482,32 L490,48 L498,24 L506,62 L514,90 L546,92 L554,72 L562,82 L570,56 L578,88 L604,90 L612,36 L620,52 L628,30 L636,68 L644,90 L676,92 L684,68 L692,80 L700,50 L708,88 L734,90 L742,34 L750,50 L758,26 L766,64 L774,90 L806,92 L814,70 L822,82 L830,54 L838,88 L864,90 L872,40 L880,56 L888,28 L896,66 L904,90 L936,92 L944,66 L952,78 L960,46 L968,88 L994,90 L1002,32 L1010,48 L1018,22 L1026,60 L1034,90 L1066,92 L1074,72 L1082,84 L1090,58 L1098,88 L1124,90 L1132,38 L1140,54 L1148,30 L1156,68 L1164,90 L1200,92"/>
+    </svg>
+    <p class="caption"><span>Power draw during on-device neural network inference.</span><span>Illustrative</span></p>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap about">
+    <div class="prose">
+      <h2>About</h2>
+      <p>Phones, cars and cameras now run neural networks all day, but they run on batteries. My work asks a question the field usually skips: how much energy does a model actually spend, and where does it go?</p>
+      <p>To answer it I build measurement tools — kernel-level energy predictors, runtime latency profilers for on-device language models, automated power-profiling rigs — and then use what they reveal to search for architectures that keep accuracy while spending far fewer joules. Lately that lens has moved up the stack: even the wording of a prompt turns out to have a measurable energy signature on a phone.</p>
+      <p>The goal behind all of it is sustainability: edge AI that stays useful without quietly running up a carbon bill. My interests sit at the intersection of edge computing, energy-efficient AI systems and sustainable AI.</p>
+      <p>Before returning to research I spent more than ten years as an engineer, shipping products at Ericsson, Huawei, Qualcomm and Apple. That decade is why I care about numbers taken from real hardware rather than from a simulator.</p>
+    </div>
+    <ul class="facts">
+      <li><span class="k">Role</span><span>Ph.D. candidate, Computer Science</span></li>
+      <li><span class="k">Lab</span><span><a href="https://www.amai-gsu.us/" style="color:var(--signal);text-decoration:none">AMAI Lab</a>, Georgia State University</span></li>
+      <li><span class="k">Advisor</span><span>Prof. Haoxin Wang</span></li>
+      <li><span class="k">Ph.D.</span><span>Georgia State University, 2023 – present</span></li>
+      <li><span class="k">B.S.</span><span>Hubei University, 2008 – 2012</span></li>
+      <li><span class="k">Based in</span><span>Atlanta, Georgia</span></li>
+      <li><span class="k">Industry</span><span class="prev"><span>Ericsson</span><span>Huawei</span><span>Qualcomm</span><span>Apple</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= RESEARCH ================= -->
+<section id="research">
+  <div class="wrap">
+    <h2>What I work on</h2>
+    <div class="themes">
+      <article class="theme">
+        <div class="n">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l4-9 3 12 3-15 3 10 2-4h3"/></svg>
+          Measurement
+        </div>
+        <h3>Seeing where the energy goes</h3>
+        <p>High-resolution power and latency profiling on commodity phones, broken down by inference phase and by individual kernel, with almost no overhead on the workload being measured.</p>
+      </article>
+      <article class="theme">
+        <div class="n">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+          Prediction
+        </div>
+        <h3>Estimating cost before deployment</h3>
+        <p>Kernel-level predictors that estimate the energy of an unseen network on a given device, and transfer to new hardware from a handful of calibration samples instead of a full re-measurement.</p>
+      </article>
+      <article class="theme">
+        <div class="n">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V9M10 20V4M16 20v-7M22 20V6"/></svg>
+          Design
+        </div>
+        <h3>Searching for efficient models</h3>
+        <p>Hardware-aware neural architecture search driven by real device energy, using Pareto-based multi-objective search to trade accuracy against power deliberately rather than by accident.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PUBLICATIONS ================= -->
+<section id="publications">
+  <div class="wrap">
+    <h2>Publications</h2>
+
+    <article class="pub">
+      <div class="yr">2026</div>
+      <div>
+        <h3>How Do Prompt Variations Affect Energy Consumption in On-Device LLMs?</h3>
+        <p class="authors">Wei Hu, <b>Xiaolong Tu</b>, Dawei Chen, Yitao Chen, Kyungtae Han, Haoxin Wang</p>
+        <p class="venue">Conference on Empirical Methods in Natural Language Processing <em>(EMNLP '26)</em>, main conference</p>
+        <div class="acts">
+          <a href="https://arxiv.org/abs/2609.01798">arXiv</a>
+          <a href="https://amai-gsu.github.io/PromptProperty/">Project page</a>
+          <details><summary>BibTeX</summary><pre>@inproceedings{hu2026prompt,
+  title     = {How Do Prompt Variations Affect Energy
+               Consumption in On-Device LLMs?},
+  author    = {Hu, Wei and Tu, Xiaolong and Chen, Dawei and
+               Chen, Yitao and Han, Kyungtae and Wang, Haoxin},
+  booktitle = {Proceedings of the 2026 Conference on Empirical
+               Methods in Natural Language Processing (EMNLP)},
+  year      = {2026},
+  eprint    = {2609.01798},
+  archivePrefix = {arXiv}
+}</pre></details>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <div class="yr">2026</div>
+      <div>
+        <h3>Transferable Latency Prediction for Fast LLM Screening on Heterogeneous Edge Devices</h3>
+        <p class="authors"><b>Xiaolong Tu</b>, Vinod K. Mishra, Venkat R. Dasari, Anu G. Bourgeois, Haoxin Wang</p>
+        <p class="venue">Preprint, arXiv:2607.21602</p>
+        <div class="acts">
+          <a href="https://arxiv.org/abs/2607.21602">arXiv</a>
+          <details><summary>BibTeX</summary><pre>@misc{tu2026transferable,
+  title  = {Transferable Latency Prediction for Fast LLM
+            Screening on Heterogeneous Edge Devices},
+  author = {Tu, Xiaolong and Mishra, Vinod K. and
+            Dasari, Venkat R. and Bourgeois, Anu G. and
+            Wang, Haoxin},
+  year   = {2026},
+  eprint = {2607.21602},
+  archivePrefix = {arXiv}
+}</pre></details>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <div class="yr">2026</div>
+      <div>
+        <h3>Keyword Matters: Unveiling the Energy Sensitivity of On-Device LLM Prompting</h3>
+        <p class="authors">Ruiyi Tao, <b>Xiaolong Tu</b>, Haoxin Wang</p>
+        <p class="venue">Preprint, arXiv:2607.22568</p>
+        <div class="acts">
+          <a href="https://arxiv.org/abs/2607.22568">arXiv</a>
+          <details><summary>BibTeX</summary><pre>@misc{tao2026keyword,
+  title  = {Keyword Matters: Unveiling the Energy Sensitivity
+            of On-Device LLM Prompting},
+  author = {Tao, Ruiyi and Tu, Xiaolong and Wang, Haoxin},
+  year   = {2026},
+  eprint = {2607.22568},
+  archivePrefix = {arXiv}
+}</pre></details>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <div class="yr">2025</div>
+      <div>
+        <h3>lm-Meter: Unveiling Runtime Inference Latency for On-Device Language Models<span class="badge">Best Paper Finalist</span></h3>
+        <p class="authors">Haoxin Wang, <b>Xiaolong Tu</b>, Hongyu Ke, Huirong Chai, Dawei Chen, Kyungtae Han</p>
+        <p class="venue">The Tenth ACM/IEEE Symposium on Edge Computing <em>(SEC '25)</em></p>
+        <div class="acts">
+          <a href="https://dl.acm.org/doi/pdf/10.1145/3769102.3770614">PDF</a>
+          <a href="https://arxiv.org/abs/2510.06126">arXiv</a>
+          <a href="https://github.com/amai-gsu/LM-Meter">Code</a>
+          <details><summary>BibTeX</summary><pre>@inproceedings{wang2025lmmeter,
+  title     = {lm-Meter: Unveiling Runtime Inference Latency
+               for On-Device Language Models},
+  author    = {Wang, Haoxin and Tu, Xiaolong and Ke, Hongyu and
+               Chai, Huirong and Chen, Dawei and Han, Kyungtae},
+  booktitle = {Proceedings of the Tenth ACM/IEEE Symposium
+               on Edge Computing (SEC)},
+  year      = {2025},
+  doi       = {10.1145/3769102.3770614}
+}</pre></details>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <div class="yr">2025</div>
+      <div>
+        <h3>PlatformX: An End-to-End Transferable Platform for Energy-Efficient Neural Architecture Search</h3>
+        <p class="authors"><b>Xiaolong Tu</b>, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang</p>
+        <p class="venue">The Tenth ACM/IEEE Symposium on Edge Computing <em>(SEC '25)</em></p>
+        <div class="acts">
+          <a href="https://dl.acm.org/doi/pdf/10.1145/3769102.3770622">PDF</a>
+          <a href="https://arxiv.org/abs/2510.08993">arXiv</a>
+          <a href="https://github.com/amai-gsu/PlatformX">Code</a>
+          <details><summary>BibTeX</summary><pre>@inproceedings{tu2025platformx,
+  title     = {PlatformX: An End-to-End Transferable Platform for
+               Energy-Efficient Neural Architecture Search},
+  author    = {Tu, Xiaolong and Chen, Dawei and Han, Kyungtae and
+               Altintas, Onur and Wang, Haoxin},
+  booktitle = {Proceedings of the Tenth ACM/IEEE Symposium
+               on Edge Computing (SEC)},
+  year      = {2025},
+  doi       = {10.1145/3769102.3770622}
+}</pre></details>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <div class="yr">2025</div>
+      <div>
+        <h3>AIEnergy: An Energy Benchmark for AI-Empowered Mobile and IoT Devices</h3>
+        <p class="authors"><b>Xiaolong Tu</b>, Anik Mallik, Haoxin Wang, Jiang Xie</p>
+        <p class="venue">ITU Journal on Future and Evolving Technologies, <em>6(2):183–197</em></p>
+        <div class="acts">
+          <a href="https://doi.org/10.52953/VWLS9762">DOI</a>
+          <details><summary>BibTeX</summary><pre>@article{tu2025aienergy,
+  title   = {AIEnergy: An energy benchmark for AI-empowered
+             mobile and IoT devices},
+  author  = {Tu, Xiaolong and Mallik, Anik and Wang, Haoxin and
+             Xie, Jiang},
+  journal = {ITU Journal on Future and Evolving Technologies},
+  volume  = {6}, number = {2}, pages = {183--197},
+  year    = {2025},
+  doi     = {10.52953/VWLS9762}
+}</pre></details>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <div class="yr">2025</div>
+      <div>
+        <h3>GreenAuto: An Automated Platform for Sustainable AI Model Design on Edge Devices</h3>
+        <p class="authors"><b>Xiaolong Tu</b>, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang</p>
+        <p class="venue">The 26th International Workshop on Mobile Computing Systems and Applications <em>(HotMobile '25)</em></p>
+        <div class="acts">
+          <a href="https://arxiv.org/abs/2501.14995">arXiv</a>
+          <details><summary>BibTeX</summary><pre>@inproceedings{tu2025greenauto,
+  title     = {GreenAuto: An Automated Platform for Sustainable
+               AI Model Design on Edge Devices},
+  author    = {Tu, Xiaolong and Chen, Dawei and Han, Kyungtae and
+               Altintas, Onur and Wang, Haoxin},
+  booktitle = {Proceedings of the 26th International Workshop on
+               Mobile Computing Systems and Applications (HotMobile)},
+  year      = {2025}
+}</pre></details>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <div class="yr">2023</div>
+      <div>
+        <h3>Unveiling Energy Efficiency in Deep Learning: Measurement, Prediction, and Scoring across Edge Devices</h3>
+        <p class="authors"><b>Xiaolong Tu</b>, Anik Mallik, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang, Jiang Xie</p>
+        <p class="venue">The Eighth ACM/IEEE Symposium on Edge Computing <em>(SEC '23)</em>, pp. 80–93</p>
+        <div class="acts">
+          <a href="./assets/documents/publications/SEC2023_ACM.pdf">PDF</a>
+          <a href="https://arxiv.org/abs/2310.18329">arXiv</a>
+          <a href="https://amai-gsu.github.io/DeepEn2023/">Data &amp; code</a>
+          <details><summary>BibTeX</summary><pre>@inproceedings{tu2023unveiling,
+  title     = {Unveiling Energy Efficiency in Deep Learning:
+               Measurement, Prediction, and Scoring across
+               Edge Devices},
+  author    = {Tu, Xiaolong and Mallik, Anik and Chen, Dawei and
+               Han, Kyungtae and Altintas, Onur and Wang, Haoxin
+               and Xie, Jiang},
+  booktitle = {Proceedings of the Eighth ACM/IEEE Symposium
+               on Edge Computing (SEC)},
+  pages     = {80--93},
+  year      = {2023}
+}</pre></details>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <div class="yr">2023</div>
+      <div>
+        <h3>DeepEn2023: Energy Datasets for Edge Artificial Intelligence</h3>
+        <p class="authors"><b>Xiaolong Tu</b>, Anik Mallik, Haoxin Wang, Jiang Xie</p>
+        <p class="venue">Tackling Climate Change with Machine Learning Workshop at <em>NeurIPS 2023</em></p>
+        <div class="acts">
+          <a href="./assets/documents/publications/DeepEn2023,%20Energy%20Datasets%20for%20Edge%20Artificial%20Intelligence%20(camera%20ready).pdf">PDF</a>
+          <a href="https://www.climatechange.ai/papers/neurips2023/89">Workshop page</a>
+          <a href="https://arxiv.org/abs/2312.00103">arXiv</a>
+          <details><summary>BibTeX</summary><pre>@inproceedings{tu2023deepen2023,
+  title     = {DeepEn2023: Energy Datasets for Edge
+               Artificial Intelligence},
+  author    = {Tu, Xiaolong and Mallik, Anik and Wang, Haoxin and
+               Xie, Jiang},
+  booktitle = {Tackling Climate Change with Machine Learning:
+               Workshop at NeurIPS},
+  year      = {2023}
+}</pre></details>
+        </div>
+      </div>
+    </article>
+
+    <article class="pub">
+      <div class="yr">2023</div>
+      <div>
+        <h3>Visualization of Mobility Digital Twin: Framework Design, Case Study, and Future Challenges</h3>
+        <p class="authors">Yueyang Liu, <b>Xiaolong Tu</b>, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang, Jiang Xie</p>
+        <p class="venue">IEEE 20th International Conference on Mobile Ad Hoc and Smart Systems <em>(MASS '23)</em>, pp. 170–177</p>
+        <div class="acts">
+          <a href="https://arxiv.org/abs/2307.02824">arXiv</a>
+          <details><summary>BibTeX</summary><pre>@inproceedings{liu2023visualization,
+  title     = {Visualization of Mobility Digital Twin: Framework
+               Design, Case Study, and Future Challenges},
+  author    = {Liu, Yueyang and Tu, Xiaolong and Chen, Dawei and
+               Han, Kyungtae and Altintas, Onur and Wang, Haoxin
+               and Xie, Jiang},
+  booktitle = {2023 IEEE 20th International Conference on Mobile
+               Ad Hoc and Smart Systems (MASS)},
+  pages     = {170--177},
+  year      = {2023},
+  organization = {IEEE}
+}</pre></details>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= NEWS ================= -->
+<section id="news">
+  <div class="wrap">
+    <h2>News and awards</h2>
+    <ul class="news">
+      <li><span class="when">Fall 2026</span><span>Our study of how prompt design changes on-device LLM energy was accepted to the <a href="https://arxiv.org/abs/2609.01798">EMNLP 2026 main conference</a> (acceptance rate 15.4%).</span></li>
+      <li><span class="when">Spring 2026</span><span>Two preprints out on latency prediction for LLM screening and on the energy sensitivity of prompt keywords.</span></li>
+      <li><span class="when">Fall 2025</span><span><em>lm-Meter</em> was named a Best Paper Award Finalist (top 5%) at ACM/IEEE SEC 2025.</span></li>
+      <li><span class="when">Fall 2025</span><span>Selected as one of three recipients of the <a href="https://csds.gsu.edu/2023/10/30/fraser-travel-award-winners-announced/">Martin D. Fraser Graduate Student Conference Travel Award</a> at GSU.</span></li>
+      <li><span class="when">Fall 2025</span><span>Two papers from our group accepted to <a href="https://acm-ieee-sec.org/2025/">ACM/IEEE SEC 2025</a>.</span></li>
+      <li><span class="when">Spring 2025</span><span>Received a Student Travel Award from <a href="https://hotmobile.org/2025/">ACM HotMobile 2025</a>.</span></li>
+      <li><span class="when">Spring 2025</span><span><em>GreenAuto</em> accepted to ACM HotMobile 2025.</span></li>
+      <li><span class="when">Fall 2023</span><span>Selected for the inaugural <a href="https://csds.gsu.edu/2023/10/30/fraser-travel-award-winners-announced/">Martin D. Fraser Graduate Student Conference Travel Award</a> at GSU.</span></li>
+      <li><span class="when">Fall 2023</span><span>Received an NSF Student Travel Grant for ACM/IEEE SEC 2023.</span></li>
+      <li><span class="when">Fall 2023</span><span><em>DeepEn2023</em> accepted to the Tackling Climate Change with Machine Learning workshop at NeurIPS 2023.</span></li>
+      <li><span class="when">Fall 2023</span><span>First-author paper accepted to SEC 2023 (acceptance rate 25.3%).</span></li>
+      <li><span class="when">Spring 2023</span><span>Joined the AMAI Lab at Georgia State University as a Ph.D. student.</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p class="prose" style="color:var(--muted)">I am always glad to talk about on-device efficiency, measurement methodology, and collaborations. Email is the fastest way to reach me.</p>
+    <div class="foot" style="margin-top:28px">
+      <a class="mail" href="mailto:xtu1@gsu.edu">xtu1@gsu.edu</a>
+      <p class="fine">Department of Computer Science<br>Georgia State University, Atlanta, GA<br><span id="year"></span> Xiaolong Tu</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // theme
+  var root=document.documentElement, key='xt-theme';
+  var saved=null;
+  try{saved=localStorage.getItem(key)}catch(e){}
+  var prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+  root.setAttribute('data-theme', saved || (prefersDark?'dark':'light'));
+  document.getElementById('themebtn').addEventListener('click',function(){
+    var next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem(key,next)}catch(e){}
+  });
+
+  // portrait fallback if the image is missing
+  var img=document.getElementById('portrait');
+  img.addEventListener('error',function(){
+    var d=document.createElement('div');
+    d.className='portrait-fallback';
+    d.textContent='XT';
+    img.replaceWith(d);
+  });
+
+  document.getElementById('year').textContent='© '+new Date().getFullYear();
+})();
+</script>
+</body>
 </html>
