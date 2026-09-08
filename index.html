@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Xiaolong Tu — Energy-efficient on-device AI</title>
-<meta name="description" content="Xiaolong Tu is a Ph.D. candidate in Computer Science at Georgia State University, working on energy measurement and efficiency for on-device deep learning and language models.">
+<title>Xiaolong Tu — Efficient foundation models</title>
+<meta name="description" content="Xiaolong Tu is a Ph.D. candidate in Computer Science at Georgia State University, working on multimodal foundation models, LLM training and inference efficiency, and model benchmarking, compression and neural architecture search.">
 <meta name="author" content="Xiaolong Tu">
-<meta name="keywords" content="Xiaolong Tu, Georgia State University, AMAI Lab, edge AI, on-device LLM, energy efficiency, neural architecture search, mobile computing">
+<meta name="keywords" content="Xiaolong Tu, Georgia State University, AMAI Lab, multimodal foundation models, LLM inference efficiency, state space models, distillation, neural architecture search, benchmarking, on-device LLM">
 <meta name="robots" content="index,follow">
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Xiaolong Tu">
-<meta property="og:description" content="Ph.D. candidate at Georgia State University. I measure and reduce the energy cost of AI on phones and edge devices.">
+<meta property="og:description" content="Ph.D. candidate at Georgia State University. I study what foundation models cost to run, and what gets lost when we make them cheaper.">
 <meta property="og:url" content="https://xiaolong-shawn.github.io/Xiaolong.Tu/">
 <meta name="twitter:card" content="summary">
 
@@ -65,7 +65,6 @@ body{
   font-family:"Inter Tight",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
   font-size:17px;
   line-height:1.6;
-  font-feature-settings:"tnum" 0;
   -webkit-font-smoothing:antialiased;
   transition:background-color .25s ease,color .25s ease;
 }
@@ -119,18 +118,18 @@ html:not([data-theme="dark"]) .i-sun{display:none}
 h1{
   font-family:"Newsreader",Georgia,serif;
   font-weight:500;font-size:clamp(46px,8vw,82px);
-  line-height:1.02;letter-spacing:-.02em;margin:0 0 18px;
+  line-height:1.02;letter-spacing:-.02em;margin:0 0 14px;
 }
 .hanzi{
-  font-size:20px;color:var(--muted);margin:-10px 0 20px;
+  font-size:20px;color:var(--muted);margin:0 0 20px;
   letter-spacing:.22em;font-weight:400;
 }
-.role{font-size:19px;color:var(--muted);margin:0 0 26px;max-width:34ch}
+.role{font-size:19px;color:var(--muted);margin:0 0 26px;max-width:36ch}
 .role b{font-weight:500;color:var(--ink)}
 .statement{
   font-family:"Newsreader",Georgia,serif;
   font-size:clamp(20px,2.4vw,25px);line-height:1.45;
-  max-width:24ch;margin:0 0 30px;font-weight:400;
+  max-width:27ch;margin:0 0 30px;font-weight:400;
 }
 .portrait{
   width:180px;height:220px;object-fit:cover;
@@ -184,16 +183,11 @@ p{margin:0 0 16px}
 .about{display:grid;grid-template-columns:1.55fr 1fr;gap:56px;align-items:start}
 .facts{list-style:none;margin:0;padding:0;font-size:15px}
 .facts li{
-  display:grid;grid-template-columns:88px 1fr;gap:14px;
+  display:grid;grid-template-columns:80px 1fr;gap:14px;
   padding:11px 0;border-top:1px solid var(--rule);
 }
 .facts li:last-child{border-bottom:1px solid var(--rule)}
-.facts dt,.facts .k{color:var(--muted)}
-.prev{display:flex;flex-wrap:wrap;gap:6px}
-.prev span{
-  border:1px solid var(--rule);border-radius:3px;
-  padding:1px 7px;font-size:13px;background:var(--surface);
-}
+.facts .k{color:var(--muted)}
 
 /* research */
 .themes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
@@ -205,16 +199,24 @@ p{margin:0 0 16px}
 .theme .n svg{width:17px;height:17px}
 .theme p{font-size:15px;color:var(--muted);margin:0}
 
+/* experience */
+.job{
+  display:grid;grid-template-columns:150px 1fr;gap:24px;
+  padding:20px 0;border-top:1px solid var(--rule);
+}
+.job:last-of-type{border-bottom:1px solid var(--rule)}
+.when2{font-size:14px;color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
+.job h3{margin-bottom:3px}
+.org{font-size:15px;color:var(--muted);margin:0 0 8px}
+.job p.d{font-size:15px;margin:0;max-width:62ch}
+
 /* publications */
 .pub{
   display:grid;grid-template-columns:72px 1fr;gap:24px;
   padding:22px 0;border-top:1px solid var(--rule);
 }
 .pub:last-of-type{border-bottom:1px solid var(--rule)}
-.yr{
-  font-size:14px;color:var(--muted);padding-top:2px;
-  font-variant-numeric:tabular-nums;
-}
+.yr{font-size:14px;color:var(--muted);padding-top:2px;font-variant-numeric:tabular-nums}
 .pub h3{font-size:17.5px;line-height:1.35;margin-bottom:7px}
 .authors{font-size:14.5px;color:var(--muted);margin:0 0 4px}
 .authors b{color:var(--ink);font-weight:600}
@@ -225,6 +227,7 @@ p{margin:0 0 16px}
   color:var(--amber);border:1px solid currentColor;border-radius:3px;
   padding:0 6px;vertical-align:1px;
 }
+.eqc{font-size:13.5px;color:var(--muted);margin:0 0 12px}
 .acts{display:flex;flex-wrap:wrap;gap:16px;align-items:center;font-size:14px}
 .acts a,.acts summary{color:var(--signal);text-decoration:none;border-bottom:1px solid transparent;cursor:pointer}
 .acts a:hover,.acts summary:hover{border-bottom-color:currentColor}
@@ -249,6 +252,20 @@ pre{
 .news .when{color:var(--muted);font-size:14px;padding-top:2px}
 .news a{color:var(--signal);text-decoration:none;border-bottom:1px solid transparent}
 .news a:hover{border-bottom-color:currentColor}
+
+.toolkit{margin-top:44px;font-size:15px}
+.toolkit li{grid-template-columns:112px 1fr}
+.toolkit .k{font-variant-numeric:normal}
+
+/* honors + service */
+.two{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:start}
+.plain{list-style:none;margin:0;padding:0;font-size:15.5px}
+.plain li{
+  display:grid;grid-template-columns:56px 1fr;gap:16px;
+  padding:12px 0;border-top:1px solid var(--rule);
+}
+.plain li:last-child{border-bottom:1px solid var(--rule)}
+.plain .k{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums;padding-top:1px}
 
 /* footer */
 footer{padding:56px 0 64px}
@@ -275,7 +292,7 @@ footer{padding:56px 0 64px}
 @media (max-width:860px){
   .hero-in{grid-template-columns:1fr;gap:32px;padding-top:52px}
   .portrait,.portrait-fallback{width:132px;height:162px}
-  .about{grid-template-columns:1fr;gap:36px}
+  .about,.two{grid-template-columns:1fr;gap:36px}
   .themes{grid-template-columns:1fr}
 }
 @media (max-width:620px){
@@ -284,10 +301,10 @@ footer{padding:56px 0 64px}
   .nav{gap:16px}
   .nav a.hide-sm{display:none}
   section{padding:48px 0}
-  .pub{grid-template-columns:1fr;gap:8px}
-  .yr{padding-top:0}
+  .pub,.job{grid-template-columns:1fr;gap:8px}
+  .yr,.when2{padding-top:0}
   .news li{grid-template-columns:1fr;gap:2px}
-  .facts li{grid-template-columns:80px 1fr;gap:10px}
+  .facts li{grid-template-columns:74px 1fr;gap:10px}
   .caption{flex-direction:column;gap:2px}
 }
 </style>
@@ -301,8 +318,8 @@ footer{padding:56px 0 64px}
     <nav class="nav">
       <a href="#about">About</a>
       <a href="#research" class="hide-sm">Research</a>
+      <a href="#experience" class="hide-sm">Experience</a>
       <a href="#publications">Papers</a>
-      <a href="#news" class="hide-sm">News</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="themebtn" id="themebtn" type="button" aria-label="Switch colour theme">
@@ -321,7 +338,7 @@ footer{padding:56px 0 64px}
       <h1>Xiaolong Tu</h1>
       <p class="hanzi" lang="zh-Hans">涂小龙</p>
       <p class="role">Ph.D. candidate in Computer Science at <b>Georgia State University</b>, in the AMAI Lab.</p>
-      <p class="statement">I measure what artificial intelligence costs in joules — and then make it cost less.</p>
+      <p class="statement">I study what foundation models cost to run, and what gets lost when we make them cheaper.</p>
       <ul class="links">
         <li><a class="primary" href="./assets/documents/CV_xiaolong.pdf">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
@@ -332,7 +349,7 @@ footer{padding:56px 0 64px}
         <li><a href="https://scholar.google.com/citations?user=8gENWR0AAAAJ&amp;hl=en">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L1.5 8.5 12 14l10.5-5.5L12 3z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
           Google Scholar</a></li>
-        <li><a href="https://github.com/xiaolong-shawn">
+        <li><a href="https://github.com/xiaolong-shawn?tab=repositories">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5a10.5 10.5 0 00-3.32 20.47c.53.1.72-.23.72-.5v-1.8c-2.92.64-3.54-1.4-3.54-1.4-.48-1.22-1.17-1.55-1.17-1.55-.96-.65.07-.64.07-.64 1.06.08 1.62 1.09 1.62 1.09.94 1.62 2.47 1.15 3.07.88.1-.68.37-1.15.67-1.42-2.33-.26-4.79-1.17-4.79-5.2 0-1.15.41-2.09 1.09-2.83-.11-.27-.47-1.34.1-2.79 0 0 .88-.28 2.9 1.08a10 10 0 015.28 0c2.01-1.36 2.9-1.08 2.9-1.08.57 1.45.21 2.52.1 2.79.68.74 1.09 1.68 1.09 2.83 0 4.04-2.47 4.93-4.82 5.19.38.33.72.97.72 1.96v2.9c0 .28.19.61.73.5A10.5 10.5 0 0012 1.5z"/></svg>
           GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/xiaolong-tu-96562ba5/">
@@ -357,19 +374,17 @@ footer{padding:56px 0 64px}
   <div class="wrap about">
     <div class="prose">
       <h2>About</h2>
-      <p>Phones, cars and cameras now run neural networks all day, but they run on batteries. My work asks a question the field usually skips: how much energy does a model actually spend, and where does it go?</p>
-      <p>To answer it I build measurement tools — kernel-level energy predictors, runtime latency profilers for on-device language models, automated power-profiling rigs — and then use what they reveal to search for architectures that keep accuracy while spending far fewer joules. Lately that lens has moved up the stack: even the wording of a prompt turns out to have a measurable energy signature on a phone.</p>
-      <p>The goal behind all of it is sustainability: edge AI that stays useful without quietly running up a carbon bill. My interests sit at the intersection of edge computing, energy-efficient AI systems and sustainable AI.</p>
-      <p>Before returning to research I spent more than ten years as an engineer, shipping products at Ericsson, Huawei, Qualcomm and Apple. That decade is why I care about numbers taken from real hardware rather than from a simulator.</p>
+      <p>Making a model cheaper is easy. Knowing what you gave up for it is not. Most efficiency work reports an aggregate score and moves on, which hides where the loss actually happened and leaves no way to fix it.</p>
+      <p>My research tries to close that gap from both ends. On one side I build instruments: fine-grained inference profilers that expose per-stage runtime behaviour across mobile, embedded and GPU platforms, transferable cost predictors calibrated from a handful of measurements, and open benchmarks built from controlled runs on real hardware. On the other I use them to look inside compressed models — tracing where representations and cross-modal alignment diverge between a teacher and its student, and localising downstream degradation to specific components rather than to a number.</p>
+      <p>Right now that means hybrid attention–state-space multimodal architectures: finding the failure mode, then designing the architectural and training interventions that recover accuracy without giving back the efficiency. Before this I spent ten years as a wireless systems engineer, which is where the habit of trusting measurement over intuition came from.</p>
     </div>
     <ul class="facts">
       <li><span class="k">Role</span><span>Ph.D. candidate, Computer Science</span></li>
       <li><span class="k">Lab</span><span><a href="https://www.amai-gsu.us/" style="color:var(--signal);text-decoration:none">AMAI Lab</a>, Georgia State University</span></li>
-      <li><span class="k">Advisor</span><span>Prof. Haoxin Wang</span></li>
-      <li><span class="k">Ph.D.</span><span>Georgia State University, 2023 – present</span></li>
+      <li><span class="k">Advisor</span><span>Dr. Haoxin Wang</span></li>
+      <li><span class="k">Ph.D.</span><span>Jan 2023 – May 2027 (expected)</span></li>
       <li><span class="k">B.S.</span><span>Hubei University, 2008 – 2012</span></li>
       <li><span class="k">Based in</span><span>Atlanta, Georgia</span></li>
-      <li><span class="k">Industry</span><span class="prev"><span>Ericsson</span><span>Huawei</span><span>Qualcomm</span><span>Apple</span></span></li>
     </ul>
   </div>
 </section>
@@ -381,29 +396,87 @@ footer{padding:56px 0 64px}
     <div class="themes">
       <article class="theme">
         <div class="n">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l4-9 3 12 3-15 3 10 2-4h3"/></svg>
-          Measurement
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="8" r="3.2"/><circle cx="17" cy="16" r="3.2"/><path d="M10 9.6l4 4.8M17 4.5v4M15 6.5h4M5 15.5v4M3 17.5h4"/></svg>
+          Multimodal models
         </div>
-        <h3>Seeing where the energy goes</h3>
-        <p>High-resolution power and latency profiling on commodity phones, broken down by inference phase and by individual kernel, with almost no overhead on the workload being measured.</p>
+        <h3>Efficient hybrid architectures</h3>
+        <p>The efficiency–accuracy trade-off in hybrid attention and state-space multimodal models: locating degradation in the parameter update behaviour of specific components, tracing what fails to transfer during distillation, and designing interventions that recover it.</p>
       </article>
       <article class="theme">
         <div class="n">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
-          Prediction
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l4-9 3 12 3-15 3 10 2-4h3"/></svg>
+          Efficiency
         </div>
-        <h3>Estimating cost before deployment</h3>
-        <p>Kernel-level predictors that estimate the energy of an unseen network on a given device, and transfer to new hardware from a handful of calibration samples instead of a full re-measurement.</p>
+        <h3>Training and inference cost</h3>
+        <p>Per-stage profiling of language model inference — prefill against autoregressive decode, throughput, memory pressure — to establish which architectural and serving choices, and which prompts, actually dominate end-to-end cost.</p>
       </article>
       <article class="theme">
         <div class="n">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V9M10 20V4M16 20v-7M22 20V6"/></svg>
-          Design
+          Benchmarking
         </div>
-        <h3>Searching for efficient models</h3>
-        <p>Hardware-aware neural architecture search driven by real device energy, using Pareto-based multi-objective search to trade accuracy against power deliberately rather than by accident.</p>
+        <h3>Compression and model search</h3>
+        <p>Measurement-in-the-loop platforms that combine hardware profiling, learned cost prediction and real-device validation, with transferable kernel-level predictors that generalise to unseen hardware from few-shot calibration.</p>
       </article>
     </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+
+    <article class="job">
+      <div class="when2">Jan 2023 – present</div>
+      <div>
+        <h3>Research Assistant</h3>
+        <p class="org">AMAI Lab, Georgia State University — Atlanta, GA</p>
+        <p class="d">Efficient hybrid multimodal models; profiling and evaluation of language model inference; measurement-in-the-loop platforms for model search, together with the open benchmarks and datasets behind them.</p>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when2">Oct 2021 – Dec 2022</div>
+      <div>
+        <h3>Cellular Interoperability System Engineer</h3>
+        <p class="org">Apple China R&amp;D — Beijing, China</p>
+        <p class="d">Designed and validated end-to-end 4G and 5G systems across devices, radio access networks and core networks, and built the measurement and analysis workflows used to diagnose performance regressions in both lab and commercial environments.</p>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when2">May 2021 – Oct 2021</div>
+      <div>
+        <h3>Modem Integration Engineer</h3>
+        <p class="org">Qualcomm China R&amp;D — Shanghai, China</p>
+        <p class="d">Integrated and validated LTE modem platforms through protocol, interoperability and performance testing.</p>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when2">Aug 2018 – May 2021</div>
+      <div>
+        <h3>Wireless System Interoperability Engineer</h3>
+        <p class="org">Huawei Shanghai R&amp;D — Shanghai, China</p>
+        <p class="d">Led 5G NR interoperability verification and proof-of-concept system integration with device, chipset and network partners.</p>
+      </div>
+    </article>
+
+    <article class="job">
+      <div class="when2">Jul 2012 – Aug 2018</div>
+      <div>
+        <h3>Wireless Network Engineer</h3>
+        <p class="org">Ericsson China R&amp;D — Nanjing, China</p>
+        <p class="d">Designed and optimised large-scale 3G and 4G radio access networks using field measurement and network performance analysis.</p>
+      </div>
+    </article>
+
+    <ul class="plain toolkit">
+      <li><span class="k">Deep learning</span><span>PyTorch, TensorFlow, Hugging Face Transformers, vision–language models, Mamba and state-space models, GPU training, fine-tuning, distillation</span></li>
+      <li><span class="k">Efficiency</span><span>Quantization, neural architecture search, latency and energy profiling, benchmark and dataset construction, llama.cpp, ONNX Runtime</span></li>
+      <li><span class="k">Engineering</span><span>Python, C/C++, Bash, Linux, Git, end-to-end ML pipelines</span></li>
+    </ul>
   </div>
 </section>
 
@@ -416,21 +489,20 @@ footer{padding:56px 0 64px}
       <div class="yr">2026</div>
       <div>
         <h3>How Do Prompt Variations Affect Energy Consumption in On-Device LLMs?</h3>
-        <p class="authors">Wei Hu, <b>Xiaolong Tu</b>, Dawei Chen, Yitao Chen, Kyungtae Han, Haoxin Wang</p>
+        <p class="authors">Wei Hu*, <b>Xiaolong Tu</b>*, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang</p>
         <p class="venue">Conference on Empirical Methods in Natural Language Processing <em>(EMNLP '26)</em>, main conference</p>
+        <p class="eqc">* Equal contribution.</p>
         <div class="acts">
           <a href="https://arxiv.org/abs/2609.01798">arXiv</a>
-          <a href="https://amai-gsu.github.io/PromptProperty/">Project page</a>
+          <a href="https://amai-gsu.github.io/PromptProperty/">Project</a>
           <details><summary>BibTeX</summary><pre>@inproceedings{hu2026prompt,
   title     = {How Do Prompt Variations Affect Energy
                Consumption in On-Device LLMs?},
   author    = {Hu, Wei and Tu, Xiaolong and Chen, Dawei and
-               Chen, Yitao and Han, Kyungtae and Wang, Haoxin},
+               Han, Kyungtae and Altintas, Onur and Wang, Haoxin},
   booktitle = {Proceedings of the 2026 Conference on Empirical
                Methods in Natural Language Processing (EMNLP)},
-  year      = {2026},
-  eprint    = {2609.01798},
-  archivePrefix = {arXiv}
+  year      = {2026}
 }</pre></details>
         </div>
       </div>
@@ -441,18 +513,18 @@ footer{padding:56px 0 64px}
       <div>
         <h3>Transferable Latency Prediction for Fast LLM Screening on Heterogeneous Edge Devices</h3>
         <p class="authors"><b>Xiaolong Tu</b>, Vinod K. Mishra, Venkat R. Dasari, Anu G. Bourgeois, Haoxin Wang</p>
-        <p class="venue">Preprint, arXiv:2607.21602</p>
+        <p class="venue">International Conference on Immersive Computing and Communications <em>(ImmerCom '26)</em></p>
         <div class="acts">
           <a href="https://arxiv.org/abs/2607.21602">arXiv</a>
-          <details><summary>BibTeX</summary><pre>@misc{tu2026transferable,
-  title  = {Transferable Latency Prediction for Fast LLM
-            Screening on Heterogeneous Edge Devices},
-  author = {Tu, Xiaolong and Mishra, Vinod K. and
-            Dasari, Venkat R. and Bourgeois, Anu G. and
-            Wang, Haoxin},
-  year   = {2026},
-  eprint = {2607.21602},
-  archivePrefix = {arXiv}
+          <details><summary>BibTeX</summary><pre>@inproceedings{tu2026transferable,
+  title     = {Transferable Latency Prediction for Fast LLM
+               Screening on Heterogeneous Edge Devices},
+  author    = {Tu, Xiaolong and Mishra, Vinod K. and
+               Dasari, Venkat R. and Bourgeois, Anu G. and
+               Wang, Haoxin},
+  booktitle = {International Conference on Immersive Computing
+               and Communications (ImmerCom)},
+  year      = {2026}
 }</pre></details>
         </div>
       </div>
@@ -462,17 +534,17 @@ footer{padding:56px 0 64px}
       <div class="yr">2026</div>
       <div>
         <h3>Keyword Matters: Unveiling the Energy Sensitivity of On-Device LLM Prompting</h3>
-        <p class="authors">Ruiyi Tao, <b>Xiaolong Tu</b>, Haoxin Wang</p>
-        <p class="venue">Preprint, arXiv:2607.22568</p>
+        <p class="authors">Roy Tao, <b>Xiaolong Tu</b>, Haoxin Wang</p>
+        <p class="venue">Edge Intelligence Workshop at the ACM/IEEE Symposium on Edge Computing <em>(SEC '26)</em></p>
         <div class="acts">
           <a href="https://arxiv.org/abs/2607.22568">arXiv</a>
-          <details><summary>BibTeX</summary><pre>@misc{tao2026keyword,
-  title  = {Keyword Matters: Unveiling the Energy Sensitivity
-            of On-Device LLM Prompting},
-  author = {Tao, Ruiyi and Tu, Xiaolong and Wang, Haoxin},
-  year   = {2026},
-  eprint = {2607.22568},
-  archivePrefix = {arXiv}
+          <details><summary>BibTeX</summary><pre>@inproceedings{tao2026keyword,
+  title     = {Keyword Matters: Unveiling the Energy Sensitivity
+               of On-Device LLM Prompting},
+  author    = {Tao, Roy and Tu, Xiaolong and Wang, Haoxin},
+  booktitle = {Edge Intelligence Workshop at the ACM/IEEE
+               Symposium on Edge Computing (SEC)},
+  year      = {2026}
 }</pre></details>
         </div>
       </div>
@@ -481,15 +553,15 @@ footer{padding:56px 0 64px}
     <article class="pub">
       <div class="yr">2025</div>
       <div>
-        <h3>lm-Meter: Unveiling Runtime Inference Latency for On-Device Language Models<span class="badge">Best Paper Finalist</span></h3>
+        <h3>LM-Meter: Unveiling Runtime Inference Latency for On-Device Language Models<span class="badge">Best Paper Finalist</span></h3>
         <p class="authors">Haoxin Wang, <b>Xiaolong Tu</b>, Hongyu Ke, Huirong Chai, Dawei Chen, Kyungtae Han</p>
-        <p class="venue">The Tenth ACM/IEEE Symposium on Edge Computing <em>(SEC '25)</em></p>
+        <p class="venue">ACM/IEEE Symposium on Edge Computing <em>(SEC '25)</em>, Washington, D.C.</p>
         <div class="acts">
           <a href="https://dl.acm.org/doi/pdf/10.1145/3769102.3770614">PDF</a>
           <a href="https://arxiv.org/abs/2510.06126">arXiv</a>
           <a href="https://github.com/amai-gsu/LM-Meter">Code</a>
           <details><summary>BibTeX</summary><pre>@inproceedings{wang2025lmmeter,
-  title     = {lm-Meter: Unveiling Runtime Inference Latency
+  title     = {LM-Meter: Unveiling Runtime Inference Latency
                for On-Device Language Models},
   author    = {Wang, Haoxin and Tu, Xiaolong and Ke, Hongyu and
                Chai, Huirong and Chen, Dawei and Han, Kyungtae},
@@ -507,7 +579,7 @@ footer{padding:56px 0 64px}
       <div>
         <h3>PlatformX: An End-to-End Transferable Platform for Energy-Efficient Neural Architecture Search</h3>
         <p class="authors"><b>Xiaolong Tu</b>, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang</p>
-        <p class="venue">The Tenth ACM/IEEE Symposium on Edge Computing <em>(SEC '25)</em></p>
+        <p class="venue">ACM/IEEE Symposium on Edge Computing <em>(SEC '25)</em>, Washington, D.C.</p>
         <div class="acts">
           <a href="https://dl.acm.org/doi/pdf/10.1145/3769102.3770622">PDF</a>
           <a href="https://arxiv.org/abs/2510.08993">arXiv</a>
@@ -531,12 +603,12 @@ footer{padding:56px 0 64px}
       <div>
         <h3>AIEnergy: An Energy Benchmark for AI-Empowered Mobile and IoT Devices</h3>
         <p class="authors"><b>Xiaolong Tu</b>, Anik Mallik, Haoxin Wang, Jiang Xie</p>
-        <p class="venue">ITU Journal on Future and Evolving Technologies, <em>6(2):183–197</em></p>
+        <p class="venue">ITU Journal on Future and Evolving Technologies, <em>volume 6, issue 2</em></p>
         <div class="acts">
-          <a href="https://doi.org/10.52953/VWLS9762">DOI</a>
+          <a href="https://doi.org/10.52953/VWLS9762">Paper</a>
           <details><summary>BibTeX</summary><pre>@article{tu2025aienergy,
-  title   = {AIEnergy: An energy benchmark for AI-empowered
-             mobile and IoT devices},
+  title   = {AIEnergy: An Energy Benchmark for AI-Empowered
+             Mobile and IoT Devices},
   author  = {Tu, Xiaolong and Mallik, Anik and Wang, Haoxin and
              Xie, Jiang},
   journal = {ITU Journal on Future and Evolving Technologies},
@@ -553,9 +625,9 @@ footer{padding:56px 0 64px}
       <div>
         <h3>GreenAuto: An Automated Platform for Sustainable AI Model Design on Edge Devices</h3>
         <p class="authors"><b>Xiaolong Tu</b>, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang</p>
-        <p class="venue">The 26th International Workshop on Mobile Computing Systems and Applications <em>(HotMobile '25)</em></p>
+        <p class="venue">26th International Workshop on Mobile Computing Systems and Applications <em>(HotMobile '25)</em>, Palm Springs, CA</p>
         <div class="acts">
-          <a href="https://arxiv.org/abs/2501.14995">arXiv</a>
+          <a href="https://arxiv.org/abs/2501.14995">Paper</a>
           <details><summary>BibTeX</summary><pre>@inproceedings{tu2025greenauto,
   title     = {GreenAuto: An Automated Platform for Sustainable
                AI Model Design on Edge Devices},
@@ -574,11 +646,11 @@ footer{padding:56px 0 64px}
       <div>
         <h3>Unveiling Energy Efficiency in Deep Learning: Measurement, Prediction, and Scoring across Edge Devices</h3>
         <p class="authors"><b>Xiaolong Tu</b>, Anik Mallik, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang, Jiang Xie</p>
-        <p class="venue">The Eighth ACM/IEEE Symposium on Edge Computing <em>(SEC '23)</em>, pp. 80–93</p>
+        <p class="venue">ACM/IEEE Symposium on Edge Computing <em>(SEC '23)</em>, Wilmington, DE, pp. 80–93</p>
         <div class="acts">
           <a href="./assets/documents/publications/SEC2023_ACM.pdf">PDF</a>
           <a href="https://arxiv.org/abs/2310.18329">arXiv</a>
-          <a href="https://amai-gsu.github.io/DeepEn2023/">Data &amp; code</a>
+          <a href="https://amai-gsu.github.io/DeepEn2023/">Project &amp; code</a>
           <details><summary>BibTeX</summary><pre>@inproceedings{tu2023unveiling,
   title     = {Unveiling Energy Efficiency in Deep Learning:
                Measurement, Prediction, and Scoring across
@@ -600,7 +672,7 @@ footer{padding:56px 0 64px}
       <div>
         <h3>DeepEn2023: Energy Datasets for Edge Artificial Intelligence</h3>
         <p class="authors"><b>Xiaolong Tu</b>, Anik Mallik, Haoxin Wang, Jiang Xie</p>
-        <p class="venue">Tackling Climate Change with Machine Learning Workshop at <em>NeurIPS 2023</em></p>
+        <p class="venue">Tackling Climate Change with Machine Learning Workshop at <em>NeurIPS 2023</em>, New Orleans, LA</p>
         <div class="acts">
           <a href="./assets/documents/publications/DeepEn2023,%20Energy%20Datasets%20for%20Edge%20Artificial%20Intelligence%20(camera%20ready).pdf">PDF</a>
           <a href="https://www.climatechange.ai/papers/neurips2023/89">Workshop page</a>
@@ -623,7 +695,7 @@ footer{padding:56px 0 64px}
       <div>
         <h3>Visualization of Mobility Digital Twin: Framework Design, Case Study, and Future Challenges</h3>
         <p class="authors">Yueyang Liu, <b>Xiaolong Tu</b>, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang, Jiang Xie</p>
-        <p class="venue">IEEE 20th International Conference on Mobile Ad Hoc and Smart Systems <em>(MASS '23)</em>, pp. 170–177</p>
+        <p class="venue">20th IEEE International Conference on Mobile Ad-Hoc and Smart Systems <em>(MASS '23)</em>, pp. 170–177</p>
         <div class="acts">
           <a href="https://arxiv.org/abs/2307.02824">arXiv</a>
           <details><summary>BibTeX</summary><pre>@inproceedings{liu2023visualization,
@@ -648,21 +720,40 @@ footer{padding:56px 0 64px}
 <!-- ================= NEWS ================= -->
 <section id="news">
   <div class="wrap">
-    <h2>News and awards</h2>
+    <h2>Recent news</h2>
     <ul class="news">
       <li><span class="when">Fall 2026</span><span>Our study of how prompt design changes on-device LLM energy was accepted to the <a href="https://arxiv.org/abs/2609.01798">EMNLP 2026 main conference</a> (acceptance rate 15.4%).</span></li>
-      <li><span class="when">Spring 2026</span><span>Two preprints out on latency prediction for LLM screening and on the energy sensitivity of prompt keywords.</span></li>
-      <li><span class="when">Fall 2025</span><span><em>lm-Meter</em> was named a Best Paper Award Finalist (top 5%) at ACM/IEEE SEC 2025.</span></li>
-      <li><span class="when">Fall 2025</span><span>Selected as one of three recipients of the <a href="https://csds.gsu.edu/2023/10/30/fraser-travel-award-winners-announced/">Martin D. Fraser Graduate Student Conference Travel Award</a> at GSU.</span></li>
+      <li><span class="when">Spring 2026</span><span>Work on transferable latency prediction for LLM screening, with DEVCOM Army Research Laboratory, accepted to ImmerCom 2026.</span></li>
+      <li><span class="when">Fall 2025</span><span><em>LM-Meter</em> was named a Best Paper Award Finalist (top 5%) at ACM/IEEE SEC 2025.</span></li>
       <li><span class="when">Fall 2025</span><span>Two papers from our group accepted to <a href="https://acm-ieee-sec.org/2025/">ACM/IEEE SEC 2025</a>.</span></li>
-      <li><span class="when">Spring 2025</span><span>Received a Student Travel Award from <a href="https://hotmobile.org/2025/">ACM HotMobile 2025</a>.</span></li>
-      <li><span class="when">Spring 2025</span><span><em>GreenAuto</em> accepted to ACM HotMobile 2025.</span></li>
-      <li><span class="when">Fall 2023</span><span>Selected for the inaugural <a href="https://csds.gsu.edu/2023/10/30/fraser-travel-award-winners-announced/">Martin D. Fraser Graduate Student Conference Travel Award</a> at GSU.</span></li>
-      <li><span class="when">Fall 2023</span><span>Received an NSF Student Travel Grant for ACM/IEEE SEC 2023.</span></li>
+      <li><span class="when">Spring 2025</span><span><em>GreenAuto</em> accepted to <a href="https://hotmobile.org/2025/">ACM HotMobile 2025</a>.</span></li>
       <li><span class="when">Fall 2023</span><span><em>DeepEn2023</em> accepted to the Tackling Climate Change with Machine Learning workshop at NeurIPS 2023.</span></li>
       <li><span class="when">Fall 2023</span><span>First-author paper accepted to SEC 2023 (acceptance rate 25.3%).</span></li>
-      <li><span class="when">Spring 2023</span><span>Joined the AMAI Lab at Georgia State University as a Ph.D. student.</span></li>
+      <li><span class="when">Jan 2023</span><span>Joined the AMAI Lab at Georgia State University as a Ph.D. student.</span></li>
     </ul>
+  </div>
+</section>
+
+<!-- ================= HONORS + SERVICE ================= -->
+<section id="honors">
+  <div class="wrap two">
+    <div>
+      <h2>Honors</h2>
+      <ul class="plain">
+        <li><span class="k">2025</span><span><a href="https://csds.gsu.edu/2023/10/30/fraser-travel-award-winners-announced/" style="color:var(--signal);text-decoration:none">Martin D. Fraser Graduate Student Conference Travel Award</a>, Georgia State University</span></li>
+        <li><span class="k">2025</span><span>NSF Student Travel Grant and HotMobile Student Travel Award</span></li>
+        <li><span class="k">2023</span><span>NSF Student Travel Grant and SEC Student Travel Award</span></li>
+        <li><span class="k">2023</span><span>Inaugural Martin D. Fraser Graduate Student Conference Travel Award, Georgia State University</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Service</h2>
+      <ul class="plain">
+        <li><span class="k">2023–</span><span>Reviewer, IEEE Internet of Things Journal</span></li>
+        <li><span class="k">2023–</span><span>Student member, IEEE</span></li>
+        <li><span class="k">2025–</span><span>Student member, ACM</span></li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -672,7 +763,7 @@ footer{padding:56px 0 64px}
 <footer id="contact">
   <div class="wrap">
     <h2>Get in touch</h2>
-    <p class="prose" style="color:var(--muted)">I am always glad to talk about on-device efficiency, measurement methodology, and collaborations. Email is the fastest way to reach me.</p>
+    <p class="prose" style="color:var(--muted)">I am graduating in May 2027 and open to conversations about efficient foundation models, model evaluation, and research or internship collaborations. Email is the fastest way to reach me.</p>
     <div class="foot" style="margin-top:28px">
       <a class="mail" href="mailto:xtu1@gsu.edu">xtu1@gsu.edu</a>
       <p class="fine">Department of Computer Science<br>Georgia State University, Atlanta, GA<br><span id="year"></span> Xiaolong Tu</p>
@@ -682,7 +773,6 @@ footer{padding:56px 0 64px}
 
 <script>
 (function(){
-  // theme
   var root=document.documentElement, key='xt-theme';
   var saved=null;
   try{saved=localStorage.getItem(key)}catch(e){}
@@ -694,7 +784,6 @@ footer{padding:56px 0 64px}
     try{localStorage.setItem(key,next)}catch(e){}
   });
 
-  // portrait fallback if the image is missing
   var img=document.getElementById('portrait');
   img.addEventListener('error',function(){
     var d=document.createElement('div');
