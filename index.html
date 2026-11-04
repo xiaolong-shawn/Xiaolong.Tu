@@ -57,7 +57,7 @@ a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline;text-underline-offset:3px}
 /* 两栏：左侧目录 + 正文。正文左边缘与横幅、页脚对齐 */
 .wrap{max-width:min(1420px,92vw);margin:0 auto;padding:0 32px;
-  display:grid;grid-template-columns:184px 1fr;gap:56px;align-items:start}
+  display:grid;grid-template-columns:172px 1fr;gap:48px;align-items:start}
 .col{max-width:none;margin:0;padding:0}
 .toc{position:sticky;top:26px;padding-top:58px}
 .toc-h{font-family:"Fraunces",Georgia,serif;font-size:13px;font-weight:600;
@@ -73,7 +73,7 @@ a:hover{text-decoration:underline;text-underline-offset:3px}
 /* ---------- 顶部横幅 ---------- */
 .band{background:var(--band);color:var(--band-ink);
   border-bottom:3px solid var(--accent);position:relative}
-.band-in{max-width:min(1420px,92vw);margin:0 auto;padding:46px 32px 42px 272px;
+.band-in{max-width:min(1420px,92vw);margin:0 auto;padding:46px 32px 42px 252px;
   display:grid;grid-template-columns:1fr 156px;gap:38px;align-items:center}
 .band h1{font-family:"Fraunces",Georgia,serif;
   font-size:clamp(33px,4.4vw,44px);font-weight:600;
@@ -185,7 +185,7 @@ html[data-theme="dark"] .pfig img{background:#f4f2ee}
 .sub:first-of-type{margin-top:0}
 
 footer{margin-top:56px;border-top:2.5px solid var(--heavy)}
-.foot{max-width:min(1420px,92vw);margin:0 auto;padding:17px 32px 50px 272px;color:var(--faint);
+.foot{max-width:min(1420px,92vw);margin:0 auto;padding:17px 32px 50px 252px;color:var(--faint);
   font-size:15px;font-style:italic;display:flex;justify-content:space-between;
   gap:16px;flex-wrap:wrap}
 
@@ -195,7 +195,7 @@ footer{margin-top:56px;border-top:2.5px solid var(--heavy)}
   padding:8px 14px;font-style:normal}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-@media (max-width:1000px){
+@media (max-width:1200px){
   .wrap{grid-template-columns:1fr;gap:0;padding:0 32px}
   .toc{display:none}
   .band-in{padding-left:32px}
