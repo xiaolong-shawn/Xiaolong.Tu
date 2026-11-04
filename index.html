@@ -32,157 +32,126 @@
 
 <style>
 /* ===================================================================
-   杂志化排版
-   主题色只有一个：--accent（酒红）。换色改这一行即可。
+   主题色只有一个：--accent（酒红）
    =================================================================== */
 :root{
-  --paper:#fcfbf9;
-  --ink:#1a1a1a;
-  --muted:#59534f;
-  --faint:#8c8681;
-  --hair:#ddd8d1;        /* 细线 */
-  --heavy:#1a1a1a;       /* 粗线 */
-  --accent:#7b2d35;      /* 酒红 */
-  --accent-lt:#9c4049;
-  --band:#17150f;        /* 顶部横幅底色 */
-  --band-ink:#f3efe8;
-  --band-muted:#a39a8d;
+  --paper:#fcfbf9; --ink:#1a1a1a; --muted:#59534f; --faint:#8c8681;
+  --hair:#ddd8d1; --heavy:#1a1a1a;
+  --accent:#7b2d35; --accent-lt:#9c4049;
+  --band:#17150f; --band-ink:#f3efe8; --band-muted:#a39a8d;
 }
 html[data-theme="dark"]{
-  --paper:#14130f;
-  --ink:#eae6df;
-  --muted:#a69e94;
-  --faint:#7d766d;
-  --hair:#2e2b26;
-  --heavy:#6b645b;
-  --accent:#d98a92;
-  --accent-lt:#e8a3aa;
-  --band:#0c0b08;
-  --band-ink:#f0ece4;
-  --band-muted:#938a7e;
+  --paper:#14130f; --ink:#eae6df; --muted:#a69e94; --faint:#7d766d;
+  --hair:#2e2b26; --heavy:#6b645b;
+  --accent:#d98a92; --accent-lt:#e8a3aa;
+  --band:#0c0b08; --band-ink:#f0ece4; --band-muted:#938a7e;
 }
-
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:24px}
-body{
-  margin:0;background:var(--paper);color:var(--ink);
+body{margin:0;background:var(--paper);color:var(--ink);
   font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
   font-size:17.5px;line-height:1.72;-webkit-font-smoothing:antialiased;
-  transition:background-color .2s ease,color .2s ease;
-}
+  transition:background-color .2s ease,color .2s ease}
 img{max-width:100%;display:block}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline;text-underline-offset:3px}
+.col{max-width:860px;margin:0 auto;padding:0 32px}
 
-.col{max-width:812px;margin:0 auto;padding:0 32px}
-
-/* ===================================================================
-   顶部横幅
-   =================================================================== */
+/* ---------- 顶部横幅 ---------- */
 .band{background:var(--band);color:var(--band-ink);
-  border-bottom:3px solid var(--accent)}
-/* 宽度与 .col 一致，横幅与正文共用同一条左边缘 */
-.band-in{max-width:812px;margin:0 auto;padding:62px 32px 54px;
-  display:grid;grid-template-columns:1fr 178px;gap:40px;align-items:center}
-.band h1{
-  font-family:"Fraunces","Fraunces Fallback",Georgia,serif;
-  font-size:clamp(50px,8.4vw,86px);font-weight:600;
-  line-height:.94;letter-spacing:-.035em;margin:0 0 12px;
-  font-variation-settings:"SOFT" 0,"WONK" 1;
-}
-.band .han{font-size:17px;color:var(--band-muted);margin:0 0 22px;
-  letter-spacing:.3em;font-weight:400}
-.band .role{font-size:17.5px;color:var(--band-ink);margin:0 0 4px;line-height:1.5}
+  border-bottom:3px solid var(--accent);position:relative}
+.band-in{max-width:860px;margin:0 auto;padding:46px 32px 42px;
+  display:grid;grid-template-columns:1fr 156px;gap:38px;align-items:center}
+.band h1{font-family:"Fraunces",Georgia,serif;
+  font-size:clamp(33px,4.4vw,44px);font-weight:600;
+  line-height:1.05;letter-spacing:-.025em;margin:0 0 4px;
+  font-variation-settings:"SOFT" 0,"WONK" 1}
+.band .han{font-size:15.5px;color:var(--band-muted);margin:0 0 18px;
+  letter-spacing:.26em}
+.band .role{font-size:17px;color:var(--band-ink);margin:0 0 3px;line-height:1.5}
 .band .role a{color:var(--band-ink);border-bottom:1px solid rgba(255,255,255,.3)}
 .band .role a:hover{text-decoration:none;border-bottom-color:var(--accent-lt)}
-.band .where{font-size:16px;color:var(--band-muted);margin:0 0 26px}
-.bl{display:flex;flex-wrap:wrap;gap:0;margin:0;padding:0;list-style:none;
-  font-size:15.5px}
+.band .where{font-size:15.5px;color:var(--band-muted);margin:0 0 20px}
+.bl{display:flex;flex-wrap:wrap;gap:0;margin:0;padding:0;list-style:none;font-size:15.5px}
 .bl li{display:flex;align-items:center}
-.bl li::after{content:"";width:1px;height:14px;
-  background:rgba(255,255,255,.22);margin:0 15px}
+.bl li::after{content:"";width:1px;height:13px;background:rgba(255,255,255,.22);margin:0 14px}
 .bl li:last-child::after{display:none}
 .bl a{color:var(--band-ink);border-bottom:1px solid transparent}
 .bl a:hover{text-decoration:none;color:#fff;border-bottom-color:var(--accent-lt)}
 .bl a.cv{color:var(--accent-lt);font-weight:600}
-.portrait{width:212px;aspect-ratio:4/5;object-fit:cover;object-position:50% 32%;
-  filter:grayscale(.15) contrast(1.03)}
-.portrait-fb{width:212px;aspect-ratio:4/5;background:#272319;display:grid;
-  place-items:center;font-family:"Fraunces",Georgia,serif;font-size:54px;
-  color:#5a5245}
-
-/* 横幅内的主题切换 */
-.tgl{position:absolute;top:18px;right:20px;border:0;background:none;
+.portrait{width:156px;aspect-ratio:4/5;object-fit:cover;object-position:50% 32%;
+  filter:grayscale(.12) contrast(1.03)}
+.portrait-fb{width:156px;aspect-ratio:4/5;background:#272319;display:grid;
+  place-items:center;font-family:"Fraunces",Georgia,serif;font-size:42px;color:#5a5245}
+.tgl{position:absolute;top:16px;right:18px;border:0;background:none;
   color:rgba(255,255,255,.45);cursor:pointer;padding:6px;z-index:5}
 .tgl:hover{color:#fff}
 .tgl svg{width:17px;height:17px;display:block}
-.band{position:relative}
 html[data-theme="dark"] .i-moon{display:none}
 html:not([data-theme="dark"]) .i-sun{display:none}
 
-/* ===================================================================
-   单栏正文：粗线起节，细线分条
-   =================================================================== */
+/* ---------- 分节 ---------- */
 main{padding-top:14px}
-section{padding:46px 0 0}
-.sh{border-top:2.5px solid var(--heavy);padding-top:14px;margin:0 0 26px}
-.sh h2{
-  font-family:"Fraunces",Georgia,serif;
-  font-size:clamp(30px,4.6vw,40px);font-weight:600;
-  letter-spacing:-.03em;line-height:1.05;margin:0;
-  font-variation-settings:"SOFT" 0,"WONK" 1;
-}
-section p{margin:0 0 17px;max-width:66ch}
+section{padding:44px 0 0}
+.sh{border-top:2.5px solid var(--heavy);padding-top:13px;margin:0 0 24px}
+.sh h2{font-family:"Fraunces",Georgia,serif;
+  font-size:clamp(26px,3.4vw,32px);font-weight:600;
+  letter-spacing:-.025em;line-height:1.08;margin:0;
+  font-variation-settings:"SOFT" 0,"WONK" 1}
+section p{margin:0 0 16px;max-width:66ch}
 section p:last-child{margin-bottom:0}
 strong{font-weight:700}
-.lede{font-size:19.5px;line-height:1.62}
+.lede{font-size:19px;line-height:1.62}
 
 /* ---------- News ---------- */
 .news{list-style:none;margin:0;padding:0}
-.news li{display:grid;grid-template-columns:104px 1fr;gap:20px;
-  padding:11px 0;border-bottom:1px solid var(--hair);font-size:16.5px;
-  line-height:1.6}
+.news li{display:grid;grid-template-columns:100px 1fr;gap:20px;padding:10px 0;
+  border-bottom:1px solid var(--hair);font-size:16.5px;line-height:1.58}
 .news li:first-child{padding-top:0}
 .news .d{color:var(--faint);font-size:15px;font-style:italic;padding-top:2px}
 .news li.extra{display:none}
 .news li.extra.on{display:grid}
 .more{background:none;border:0;color:var(--accent);cursor:pointer;
-  font-family:inherit;font-size:16px;padding:14px 0 0;font-style:italic}
+  font-family:inherit;font-size:16px;padding:13px 0 0;font-style:italic}
 .more:hover{text-decoration:underline}
 
-/* ---------- 论文 ---------- */
-.pub{display:grid;grid-template-columns:132px 1fr;gap:22px;padding:24px 0;
-  border-bottom:1px solid var(--hair)}
+/* ---------- 论文：正文在左，图在右 ---------- */
+.pub{display:grid;grid-template-columns:1fr 246px;gap:30px;padding:22px 0;
+  border-bottom:1px solid var(--hair);align-items:start}
 .pub:first-of-type{padding-top:0}
-.fig{aspect-ratio:3/2;overflow:hidden;display:grid;place-items:center;
-  background:#edeae4;border:1px solid var(--hair)}
-html[data-theme="dark"] .fig{background:#1e1c17}
-.fig img{width:100%;height:100%;object-fit:cover}
-.fig .ph{font-family:"Fraunces",Georgia,serif;font-size:17px;font-weight:600;
-  color:var(--faint);text-align:center;line-height:1.15;padding:0 6px}
-.fig .ph em{display:block;font-style:italic;font-size:13px;font-weight:400;
-  margin-top:3px}
-.pt{font-family:"Fraunces",Georgia,serif;font-size:21px;font-weight:600;
-  letter-spacing:-.018em;line-height:1.22;margin:0 0 7px}
+.pub.nofig{grid-template-columns:1fr}
+.pfig img{width:100%;height:auto;border:1px solid var(--hair);background:#fff}
+html[data-theme="dark"] .pfig img{background:#f4f2ee}
+.pt{font-family:"Fraunces",Georgia,serif;font-size:20px;font-weight:600;
+  letter-spacing:-.018em;line-height:1.24;margin:0 0 6px}
 .pt a{color:var(--ink)}
 .pt a:hover{color:var(--accent);text-decoration:none}
 .pa{font-size:16px;color:var(--muted);margin:0 0 2px;line-height:1.5}
 .pa .me{color:var(--ink);font-weight:700}
-.pv{font-size:16px;color:var(--muted);margin:0 0 2px;font-style:italic}
+.pv{font-size:16px;color:var(--muted);margin:0 0 2px;font-style:italic;
+  display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.vlg{display:inline-flex;align-items:center;flex:none}
+.vlg img{height:15px;width:auto;opacity:.85}
 .pn{font-size:15.5px;color:var(--accent);font-weight:700;margin:4px 0 0}
-.pd{font-size:16px;color:var(--muted);margin:9px 0 10px;line-height:1.6;
-  max-width:60ch}
+.pd{font-size:16px;color:var(--muted);margin:8px 0 10px;line-height:1.55;max-width:58ch}
 .pl{display:flex;flex-wrap:wrap;gap:0;font-size:15.5px;margin:0}
 .pl a{border-bottom:1px solid var(--hair);font-style:italic}
 .pl a:hover{text-decoration:none;border-bottom-color:var(--accent)}
 .pl span.sep{color:var(--hair);margin:0 11px}
 .eqn{font-size:15px;color:var(--faint);margin:18px 0 0;font-style:italic}
 
-/* ---------- 教育 / 经历 ---------- */
-.row{display:grid;grid-template-columns:1fr 168px;gap:20px;padding:15px 0;
-  border-bottom:1px solid var(--hair)}
+/* ---------- 教育 / 经历（带 logo） ---------- */
+.row{display:grid;grid-template-columns:46px 1fr 158px;gap:18px;padding:14px 0;
+  border-bottom:1px solid var(--hair);align-items:start}
 .row:first-of-type{padding-top:0}
-.ro{font-family:"Fraunces",Georgia,serif;font-size:19px;font-weight:600;
+.lg{width:46px;height:46px;display:grid;place-items:center;flex:none;
+  color:var(--ink);overflow:hidden}
+.lg svg{width:26px;height:26px}
+.lg img{max-width:46px;max-height:46px;width:auto;height:auto;object-fit:contain}
+.lg .mono{width:40px;height:40px;border:1px solid var(--hair);display:grid;
+  place-items:center;font-family:"Fraunces",Georgia,serif;font-size:16px;
+  font-weight:600;color:var(--faint)}
+.ro{font-family:"Fraunces",Georgia,serif;font-size:18.5px;font-weight:600;
   letter-spacing:-.015em;margin:0 0 2px}
 .rd{font-size:16px;color:var(--muted);margin:0;line-height:1.5}
 .rw{font-size:15.5px;color:var(--faint);text-align:right;padding-top:4px;
@@ -194,15 +163,14 @@ html[data-theme="dark"] .fig{background:#1e1c17}
   border-bottom:1px solid var(--hair);font-size:16.5px}
 .mini .k{color:var(--faint);font-style:italic;font-size:15.5px;
   font-variant-numeric:tabular-nums}
-.sub{font-family:"Fraunces",Georgia,serif;font-size:20px;font-weight:600;
-  letter-spacing:-.015em;margin:30px 0 12px}
+.sub{font-family:"Fraunces",Georgia,serif;font-size:19px;font-weight:600;
+  letter-spacing:-.015em;margin:28px 0 12px}
 .sub:first-of-type{margin-top:0}
 
-/* ---------- 页脚 ---------- */
-footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
-.foot{max-width:812px;margin:0 auto;padding:18px 32px 52px;
-  color:var(--faint);font-size:15px;font-style:italic;
-  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer{margin-top:56px;border-top:2.5px solid var(--heavy)}
+.foot{max-width:860px;margin:0 auto;padding:17px 32px 50px;color:var(--faint);
+  font-size:15px;font-style:italic;display:flex;justify-content:space-between;
+  gap:16px;flex-wrap:wrap}
 
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .skip{position:absolute;left:-9999px}
@@ -210,25 +178,28 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
   padding:8px 14px;font-style:normal}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-
-@media (max-width:760px){
-  .band-in{grid-template-columns:1fr;gap:30px;padding:44px 24px 40px}
-  .portrait,.portrait-fb{width:150px}
+@media (max-width:780px){
+  .band-in{grid-template-columns:1fr;gap:26px;padding:38px 24px 34px}
+  .portrait,.portrait-fb{width:140px}
   .col,.foot{padding-left:24px;padding-right:24px}
+  .pub{grid-template-columns:1fr;gap:16px}
+  .pfig{max-width:320px}
 }
 @media (max-width:560px){
   body{font-size:17px}
   .col,.foot{padding-left:20px;padding-right:20px}
-  .band-in{padding:38px 20px 34px}
-  section{padding-top:38px}
-  .pub{grid-template-columns:1fr;gap:14px}
-  .fig{max-width:190px}
-  .news li{grid-template-columns:1fr;gap:1px;padding:12px 0}
+  .band-in{padding:32px 20px 30px}
+  section{padding-top:36px}
+  .news li{grid-template-columns:1fr;gap:1px;padding:11px 0}
   .news .d{padding-top:0}
-  .row{grid-template-columns:1fr;gap:3px}
-  .rw{text-align:left;padding-top:2px}
+  .row{grid-template-columns:36px 1fr;gap:14px}
+  .lg{width:36px;height:36px}
+  .lg svg{width:22px;height:22px}
+  .lg img{max-width:36px;max-height:36px}
+  .rw{grid-column:2;text-align:left;padding-top:2px}
   .mini li{grid-template-columns:66px 1fr;gap:12px}
-  .bl{gap:4px 0}
+  .bl{gap:6px 20px}
+  .bl li::after{display:none}
 }
 </style>
 </head>
@@ -236,10 +207,6 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
 <body>
 <a class="skip" href="#about">Skip to content</a>
 
-<!-- =================================================================
-     顶部横幅
-     照片：把 LinkedIn 那张存成 assets/img/profile.jpg 即可
-     ================================================================= -->
 <header class="band">
   <button class="tgl" id="tgl" type="button" aria-label="Switch colour theme">
     <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
@@ -252,7 +219,7 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
       <p class="role">Ph.D. Candidate in Computer Science, <a href="https://www.gsu.edu/">Georgia State University</a></p>
       <p class="where"><a href="https://www.amai-gsu.us/" style="color:var(--band-muted)">AMAI Lab</a> · Advised by Dr. Haoxin Wang · Atlanta, Georgia</p>
       <ul class="bl">
-        <li><a class="cv" href="assets/documents/CV_xiaolong.pdf">Curriculum Vitae</a></li>
+        <li><a class="cv" href="assets/documents/CV_xiaolong.pdf">CV</a></li>
         <li><a href="#" id="mail">Email</a></li>
         <li><a href="https://scholar.google.com/citations?user=8gENWR0AAAAJ&amp;hl=en">Google Scholar</a></li>
         <li><a href="https://github.com/xiaolong-shawn?tab=repositories">GitHub</a></li>
@@ -265,7 +232,6 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
 
 <main>
 
-<!-- ---------------------------------------------------------------- -->
 <section id="about"><div class="col">
   <div class="sh"><h2>About</h2></div>
   <p class="lede">I am Xiaolong Tu (涂小龙), a Ph.D. candidate in Computer Science at Georgia State University, working in the Advanced Mobility &amp; Augmented Intelligence Lab under Dr. Haoxin Wang. My research interests are <strong>multimodal foundation models</strong>, <strong>the efficiency of LLM training and inference</strong>, and <strong>model benchmarking, compression and neural architecture search</strong>.</p>
@@ -273,13 +239,11 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
   <p>Before starting my Ph.D. I spent over ten years as a wireless systems engineer at <strong>Ericsson</strong>, <strong>Huawei</strong>, <strong>Qualcomm</strong> and <strong>Apple</strong>, working on 3G through 5G system design, interoperability and performance analysis. I received my B.S. from Hubei University in 2012.</p>
 </div></section>
 
-<!-- ---------------------------------------------------------------- -->
 <section id="news"><div class="col">
   <div class="sh"><h2>News</h2></div>
-  <!-- 加新条目：在最前面插一个 <li>；第 7 条起加 class="extra" 会被折叠 -->
   <ul class="news" id="newslist">
     <li><span class="d">Sep 2026</span><span>Our paper <a href="https://arxiv.org/abs/2609.01798">How Do Prompt Variations Affect Energy Consumption in On-Device LLMs?</a> is accepted to <strong>EMNLP 2026</strong> main conference.</span></li>
-    <li><span class="d">May 2026</span><span><a href="https://arxiv.org/abs/2607.21602">Transferable Latency Prediction for Fast LLM Screening</a>, with DEVCOM Army Research Laboratory, is accepted to <strong>ImmerCom 2026</strong>.</span></li>
+    <li><span class="d">May 2026</span><span><a href="https://arxiv.org/abs/2607.21602">Transferable Latency Prediction for Fast LLM Screening</a>, with DEVCOM Army Research Laboratory, is accepted to <strong>ImmerCom 2026</strong> at ACM MobiCom.</span></li>
     <li><span class="d">May 2026</span><span><a href="https://arxiv.org/abs/2607.22568">Keyword Matters</a> is accepted to the <strong>Edge Intelligence Workshop</strong> at ACM/IEEE SEC 2026.</span></li>
     <li><span class="d">Dec 2025</span><span><a href="https://doi.org/10.1145/3769102.3770614">LM-Meter</a> is named a <strong>Best Paper Award Finalist</strong> (top 5%) at ACM/IEEE SEC 2025.</span></li>
     <li><span class="d">Oct 2025</span><span>Received the <strong>Martin D. Fraser Graduate Student Conference Travel Award</strong>, one of three recipients at GSU.</span></li>
@@ -295,122 +259,116 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
   <button class="more" id="more" type="button">Show earlier news</button>
 </div></section>
 
-<!-- ----------------------------------------------------------------
-     论文
-     配图：图片放 assets/img/pub/ 下，然后把
-           <div class="fig"><span class="ph">EMNLP<em>2026</em></span></div>
-     换成  <div class="fig"><img src="assets/img/pub/emnlp2026.jpg" alt=""></div>
-     建议 3:2、宽 600–900px
-     ---------------------------------------------------------------- -->
+<!-- ================================================================
+     论文：正文在左，论文主图在右（246px，保持原始比例）
+     加图：<div class="pfig"><img src="assets/img/pub/xxx.jpg" alt=""></div>
+           同时把 <article class="pub nofig"> 的 nofig 去掉
+     会议 logo：在 .pv 里加
+           <span class="vlg"><img src="assets/img/venue/sec.png" alt=""></span>
+           图缺失会自动隐藏
+     ================================================================ -->
 <section id="publications"><div class="col">
   <div class="sh"><h2>Publications</h2></div>
 
   <article class="pub">
-    <div class="fig"><span class="ph">EMNLP<em>2026</em></span></div>
     <div>
       <p class="pt"><a href="https://arxiv.org/abs/2609.01798">How Do Prompt Variations Affect Energy Consumption in On-Device LLMs?</a></p>
       <p class="pa">Wei Hu*, <span class="me">Xiaolong Tu</span>*, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang</p>
-      <p class="pv">Conference on Empirical Methods in Natural Language Processing (EMNLP), main conference</p>
+      <p class="pv"><span class="vlg"><img src="assets/img/venue/emnlp.png" alt=""></span>Conference on Empirical Methods in Natural Language Processing (EMNLP) 2026, main conference</p>
       <p class="pd">The first large-scale study of how prompt phrasing and cognitive load shape on-device inference energy: 404 prompts, 5 models, 2 phones, 7,620 runs with phase-level profiling. Cognitive load changes energy per token; phrasing changes it mainly through token count.</p>
       <p class="pl"><a href="https://arxiv.org/abs/2609.01798">arXiv</a><span class="sep">/</span><a href="https://amai-gsu.github.io/PromptProperty/">Project</a></p>
     </div>
+    <div class="pfig"><img src="assets/img/pub/emnlp2026.jpg" alt="Energy-quality Pareto frontiers across five on-device LLMs"></div>
   </article>
 
-  <article class="pub">
-    <div class="fig"><span class="ph">ImmerCom<em>2026</em></span></div>
+  <article class="pub nofig">
     <div>
       <p class="pt"><a href="https://arxiv.org/abs/2607.21602">Transferable Latency Prediction for Fast LLM Screening on Heterogeneous Edge Devices</a></p>
       <p class="pa"><span class="me">Xiaolong Tu</span>, Vinod K. Mishra, Venkat R. Dasari, Anu G. Bourgeois, Haoxin Wang</p>
-      <p class="pv">International Conference on Immersive Computing and Communications (ImmerCom)</p>
+      <p class="pv"><span class="vlg"><img src="assets/img/venue/mobicom.png" alt=""></span>ImmerCom 2026, Workshop at ACM MobiCom</p>
       <p class="pd">A runtime-aware latency predictor that fuses static descriptors with live hardware telemetry, separates prefill from decode, and screens candidate LLMs before expensive on-device execution. Validated on Pixel phones, Jetson Nano, Orange Pi 5 Pro and an RTX 3090-class GPU.</p>
       <p class="pl"><a href="https://arxiv.org/abs/2607.21602">arXiv</a></p>
     </div>
   </article>
 
-  <article class="pub">
-    <div class="fig"><span class="ph">SEC-W<em>2026</em></span></div>
+  <article class="pub nofig">
     <div>
       <p class="pt"><a href="https://arxiv.org/abs/2607.22568">Keyword Matters: Unveiling the Energy Sensitivity of On-Device LLM Prompting</a></p>
       <p class="pa">Roy Tao, <span class="me">Xiaolong Tu</span>, Haoxin Wang</p>
-      <p class="pv">Edge Intelligence Workshop at the ACM/IEEE Symposium on Edge Computing (SEC)</p>
+      <p class="pv"><span class="vlg"><img src="assets/img/venue/sec.png" alt=""></span>Edge Intelligence Workshop at the ACM/IEEE Symposium on Edge Computing (SEC) 2026</p>
       <p class="pd">Real power measurements on a smartphone showing how imperative keywords and instruction structure change decoding length and total energy, making prompt wording a lightweight lever for efficiency.</p>
       <p class="pl"><a href="https://arxiv.org/abs/2607.22568">arXiv</a></p>
     </div>
   </article>
 
-  <article class="pub">
-    <div class="fig"><span class="ph">SEC<em>2025</em></span></div>
+  <article class="pub nofig">
     <div>
       <p class="pt"><a href="https://dl.acm.org/doi/10.1145/3769102.3770614">LM-Meter: Unveiling Runtime Inference Latency for On-Device Language Models</a></p>
       <p class="pa">Haoxin Wang, <span class="me">Xiaolong Tu</span>, Hongyu Ke, Huirong Chai, Dawei Chen, Kyungtae Han</p>
-      <p class="pv">ACM/IEEE Symposium on Edge Computing (SEC), Washington, D.C.</p>
+      <p class="pv"><span class="vlg"><img src="assets/img/venue/sec.png" alt=""></span>ACM/IEEE Symposium on Edge Computing (SEC) 2025, Washington, D.C.</p>
       <p class="pn">Best Paper Award Finalist — top 5%</p>
       <p class="pd">The first lightweight online latency profiler for on-device LLM inference, costing 2.58% of prefill and 0.99% of decode throughput. It reveals that scaling a model raises prefill latency far faster than decode on phones — the inverse of the datacenter picture — and that three fused GEMM kernels carry over 60% of decode time.</p>
       <p class="pl"><a href="https://dl.acm.org/doi/pdf/10.1145/3769102.3770614">Paper</a><span class="sep">/</span><a href="https://arxiv.org/abs/2510.06126">arXiv</a><span class="sep">/</span><a href="https://github.com/amai-gsu/LM-Meter">Code</a></p>
     </div>
   </article>
 
-  <article class="pub">
-    <div class="fig"><span class="ph">SEC<em>2025</em></span></div>
+  <article class="pub nofig">
     <div>
       <p class="pt"><a href="https://dl.acm.org/doi/10.1145/3769102.3770622">PlatformX: An End-to-End Transferable Platform for Energy-Efficient Neural Architecture Search</a></p>
       <p class="pa"><span class="me">Xiaolong Tu</span>, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang</p>
-      <p class="pv">ACM/IEEE Symposium on Edge Computing (SEC), Washington, D.C.</p>
+      <p class="pv"><span class="vlg"><img src="assets/img/venue/sec.png" alt=""></span>ACM/IEEE Symposium on Edge Computing (SEC) 2025, Washington, D.C.</p>
       <p class="pd">A fully automated hardware-aware NAS platform that searches 959,417 architectures in 7 GPU-days, adapts its kernel-level energy predictor to unseen phones from about 100 samples, and finds models reaching 0.94 accuracy or 0.16 mJ per inference.</p>
       <p class="pl"><a href="https://dl.acm.org/doi/pdf/10.1145/3769102.3770622">Paper</a><span class="sep">/</span><a href="https://arxiv.org/abs/2510.08993">arXiv</a><span class="sep">/</span><a href="https://github.com/amai-gsu/PlatformX">Code</a></p>
     </div>
   </article>
 
-  <article class="pub">
-    <div class="fig"><span class="ph">ITU-J<em>2025</em></span></div>
+  <article class="pub nofig">
     <div>
       <p class="pt"><a href="https://doi.org/10.52953/VWLS9762">AIEnergy: An Energy Benchmark for AI-Empowered Mobile and IoT Devices</a></p>
       <p class="pa"><span class="me">Xiaolong Tu</span>, Anik Mallik, Haoxin Wang, Jiang Xie</p>
-      <p class="pv">ITU Journal on Future and Evolving Technologies, vol. 6, no. 2</p>
+      <p class="pv"><span class="vlg"><img src="assets/img/venue/itu.png" alt=""></span>ITU Journal on Future and Evolving Technologies 2025, vol. 6, no. 2</p>
       <p class="pd">An energy benchmark for AI workloads on mobile and IoT hardware, built from controlled measurement on real devices rather than from proxy metrics such as FLOPs.</p>
       <p class="pl"><a href="https://doi.org/10.52953/VWLS9762">Paper</a></p>
     </div>
   </article>
 
-  <article class="pub">
-    <div class="fig"><span class="ph">HotMobile<em>2025</em></span></div>
+  <article class="pub nofig">
     <div>
       <p class="pt"><a href="https://arxiv.org/abs/2501.14995">GreenAuto: An Automated Platform for Sustainable AI Model Design on Edge Devices</a></p>
       <p class="pa"><span class="me">Xiaolong Tu</span>, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang</p>
-      <p class="pv">International Workshop on Mobile Computing Systems and Applications (HotMobile), Palm Springs, CA</p>
+      <p class="pv"><span class="vlg"><img src="assets/img/venue/hotmobile.png" alt=""></span>International Workshop on Mobile Computing Systems and Applications (HotMobile) 2025, Palm Springs, CA</p>
       <p class="pd">An end-to-end platform for exploring, generating, deploying and evaluating sustainable AI models, using Pareto-front search over an expanded NAS space guided by pre-trained kernel-level energy predictors.</p>
       <p class="pl"><a href="https://arxiv.org/abs/2501.14995">Paper</a></p>
     </div>
   </article>
 
   <article class="pub">
-    <div class="fig"><img src="assets/img/pub/sec2023.jpg" alt="Energy-efficiency scoring across edge devices"></div>
     <div>
       <p class="pt"><a href="https://arxiv.org/abs/2310.18329">Unveiling Energy Efficiency in Deep Learning: Measurement, Prediction, and Scoring across Edge Devices</a></p>
       <p class="pa"><span class="me">Xiaolong Tu</span>, Anik Mallik, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang, Jiang Xie</p>
-      <p class="pv">ACM/IEEE Symposium on Edge Computing (SEC), Wilmington, DE, pp. 80–93</p>
+      <p class="pv"><span class="vlg"><img src="assets/img/venue/sec.png" alt=""></span>ACM/IEEE Symposium on Edge Computing (SEC) 2023, Wilmington, DE, pp. 80–93</p>
       <p class="pd">The first detailed measurement study of on-device deep learning energy across edge hardware, producing kernel-, model- and application-level datasets and the first kernel-level energy predictors for mobile CPU and GPU.</p>
       <p class="pl"><a href="assets/documents/publications/SEC2023_ACM.pdf">Paper</a><span class="sep">/</span><a href="https://arxiv.org/abs/2310.18329">arXiv</a><span class="sep">/</span><a href="https://amai-gsu.github.io/DeepEn2023/">Project</a></p>
     </div>
+    <div class="pfig"><img src="assets/img/pub/sec2023.jpg" alt="Energy-efficiency scoring across eight commercial smartphones"></div>
   </article>
 
   <article class="pub">
-    <div class="fig"><span class="ph">NeurIPS-W<em>2023</em></span></div>
     <div>
       <p class="pt"><a href="https://arxiv.org/abs/2312.00103">DeepEn2023: Energy Datasets for Edge Artificial Intelligence</a></p>
       <p class="pa"><span class="me">Xiaolong Tu</span>, Anik Mallik, Haoxin Wang, Jiang Xie</p>
-      <p class="pv">Tackling Climate Change with Machine Learning Workshop at NeurIPS, New Orleans, LA</p>
+      <p class="pv"><span class="vlg"><img src="assets/img/venue/neurips.png" alt=""></span>Tackling Climate Change with Machine Learning Workshop at NeurIPS 2023, New Orleans, LA</p>
       <p class="pd">Open energy datasets spanning kernels, state-of-the-art DNN models and popular AI applications on edge devices, released so that energy results can be compared across studies.</p>
       <p class="pl"><a href="assets/documents/publications/DeepEn2023,%20Energy%20Datasets%20for%20Edge%20Artificial%20Intelligence%20(camera%20ready).pdf">Paper</a><span class="sep">/</span><a href="https://www.climatechange.ai/papers/neurips2023/89">Workshop</a><span class="sep">/</span><a href="https://arxiv.org/abs/2312.00103">arXiv</a></p>
     </div>
+    <div class="pfig"><img src="assets/img/pub/deepen2023.jpg" alt="Power measurement platform with Monsoon power monitor and eight smartphones"></div>
   </article>
 
-  <article class="pub">
-    <div class="fig"><span class="ph">MASS<em>2023</em></span></div>
+  <article class="pub nofig">
     <div>
       <p class="pt"><a href="https://arxiv.org/abs/2307.02824">Visualization of Mobility Digital Twin: Framework Design, Case Study, and Future Challenges</a></p>
       <p class="pa">Yueyang Liu, <span class="me">Xiaolong Tu</span>, Dawei Chen, Kyungtae Han, Onur Altintas, Haoxin Wang, Jiang Xie</p>
-      <p class="pv">IEEE International Conference on Mobile Ad-Hoc and Smart Systems (MASS), pp. 170–177</p>
+      <p class="pv"><span class="vlg"><img src="assets/img/venue/ieee.png" alt=""></span>IEEE International Conference on Mobile Ad-Hoc and Smart Systems (MASS) 2023, pp. 170–177</p>
       <p class="pd">A framework for visualising mobility digital twins of connected and automated vehicles, with a case study and an outline of the open challenges.</p>
       <p class="pl"><a href="https://arxiv.org/abs/2307.02824">arXiv</a></p>
     </div>
@@ -419,12 +377,17 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
   <p class="eqn">* Equal contribution.</p>
 </div></section>
 
-<!-- ---------------------------------------------------------------- -->
+<!-- ================================================================
+     教育 / 经历
+     学校 logo：放 assets/img/logo/ 下（gsu.png、hubu.png），
+                缺失时自动退回首字母方块
+     ================================================================ -->
 <section id="experience"><div class="col">
   <div class="sh"><h2>Education &amp; Experience</h2></div>
 
   <p class="sub">Education</p>
   <div class="row">
+    <span class="lg"><img class="lgi" src="assets/img/logo/gsu.png" alt="" data-mono="GS"></span>
     <div>
       <p class="ro">Georgia State University</p>
       <p class="rd">Ph.D. in Computer Science · AMAI Lab, advised by Dr. Haoxin Wang</p>
@@ -432,6 +395,7 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
     <div class="rw">Jan 2023 – May 2027<br>(expected)</div>
   </div>
   <div class="row">
+    <span class="lg"><img class="lgi" src="assets/img/logo/hubu.png" alt="" data-mono="HU"></span>
     <div>
       <p class="ro">Hubei University</p>
       <p class="rd">B.S. in Computer Science</p>
@@ -441,6 +405,7 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
 
   <p class="sub">Experience</p>
   <div class="row">
+    <span class="lg"><img class="lgi" src="assets/img/logo/gsu.png" alt="" data-mono="GS"></span>
     <div>
       <p class="ro">Georgia State University</p>
       <p class="rd">Research Assistant, AMAI Lab<br>Efficient multimodal models, LLM inference profiling, measurement-driven model search</p>
@@ -448,6 +413,7 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
     <div class="rw">Jan 2023 – present</div>
   </div>
   <div class="row">
+    <span class="lg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span>
     <div>
       <p class="ro">Apple</p>
       <p class="rd">Cellular Interoperability System Engineer, China R&amp;D, Beijing<br>End-to-end 4G and 5G system validation across devices, RAN and core networks</p>
@@ -455,6 +421,7 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
     <div class="rw">Oct 2021 – Dec 2022</div>
   </div>
   <div class="row">
+    <span class="lg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C6.22933 0 1.5761 4.48645 1.5761 10.47394c0 6.00417 4.65323 10.47394 10.4239 10.47394.98402 0 1.93468-.13343 2.8353-.3836l1.13412 2.9187c.11675.31688.35025.51702.7672.51702h1.80125c.43364 0 .75052-.28353.55038-.83391l-1.46768-3.81932c2.88534-1.81793 4.80333-5.03683 4.80333-8.8895C22.4239 4.48644 17.77067 0 12 0m4.53648 16.5615l-1.31758-3.41904c-.11675-.28353-.35024-.55038-.85059-.55038h-1.71786c-.43363 0-.7672.28353-.56706.83391l1.73454 4.48645c-.56706.1501-1.18416.21682-1.81793.21682-4.2196 0-7.22168-3.31897-7.22168-7.65532C4.77832 6.1376 7.7804 2.81862 12 2.81862s7.22168 3.31898 7.22168 7.65532c0 2.5351-1.01737 4.70327-2.6852 6.08756"/></svg></span>
     <div>
       <p class="ro">Qualcomm</p>
       <p class="rd">Modem Integration Engineer, China R&amp;D, Shanghai<br>LTE modem platform integration and system-level verification</p>
@@ -462,6 +429,7 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
     <div class="rw">May 2021 – Oct 2021</div>
   </div>
   <div class="row">
+    <span class="lg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.67 6.14S1.82 7.91 1.72 9.78v.35c.08 1.51 1.22 2.4 1.22 2.4 1.83 1.79 6.26 4.04 7.3 4.55 0 0 .06.03.1-.01l.02-.04v-.04C7.52 10.8 3.67 6.14 3.67 6.14zM9.65 18.6c-.02-.08-.1-.08-.1-.08l-7.38.26c.8 1.43 2.15 2.53 3.56 2.2.96-.25 3.16-1.78 3.88-2.3.06-.05.04-.09.04-.09zm.08-.78C6.49 15.63.21 12.28.21 12.28c-.15.46-.2.9-.21 1.3v.07c0 1.07.4 1.82.4 1.82.8 1.69 2.34 2.2 2.34 2.2.7.3 1.4.31 1.4.31.12.02 4.4 0 5.54 0 .05 0 .08-.05.08-.05v-.06c0-.03-.03-.05-.03-.05zM9.06 3.19a3.42 3.42 0 00-2.57 3.15v.41c.03.6.16 1.05.16 1.05.66 2.9 3.86 7.65 4.55 8.65.05.05.1.03.1.03a.1.1 0 00.06-.1c1.06-10.6-1.11-13.42-1.11-13.42-.32.02-1.19.23-1.19.23zm8.299 2.27s-.49-1.8-2.44-2.28c0 0-.57-.14-1.17-.22 0 0-2.18 2.81-1.12 13.43.01.07.06.08.06.08.07.03.1-.03.1-.03.72-1.03 3.9-5.76 4.55-8.64 0 0 .36-1.4.02-2.34zm-2.92 13.07s-.07 0-.09.05c0 0-.01.07.03.1.7.51 2.85 2 3.88 2.3 0 0 .16.05.43.06h.14c.69-.02 1.9-.37 3-2.26l-7.4-.25zm7.83-8.41c.14-2.06-1.94-3.97-1.94-3.98 0 0-3.85 4.66-6.67 10.8 0 0-.03.08.02.13l.04.01h.06c1.06-.53 5.46-2.77 7.28-4.54 0 0 1.15-.93 1.21-2.42zm1.52 2.14s-6.28 3.37-9.52 5.55c0 0-.05.04-.03.11 0 0 .03.06.07.06 1.16 0 5.56 0 5.67-.02 0 0 .57-.02 1.27-.29 0 0 1.56-.5 2.37-2.27 0 0 .73-1.45.17-3.14z"/></svg></span>
     <div>
       <p class="ro">Huawei</p>
       <p class="rd">Wireless System Interoperability Engineer, Shanghai R&amp;D<br>5G NR interoperability verification during early NR commercialisation</p>
@@ -469,6 +437,7 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
     <div class="rw">Aug 2018 – May 2021</div>
   </div>
   <div class="row">
+    <span class="lg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.76 1.593A2.36 2.36 0 0 0 19.572.225c-.54-.27-1.188-.336-2.256.02L5.187 4.29c-1.068.357-1.548.795-1.818 1.338a2.36 2.36 0 0 0 1.059 3.174c.54.27 1.188.336 2.256-.021l12.129-4.044c1.068-.354 1.548-.795 1.818-1.338a2.35 2.35 0 0 0 .13-1.806zm0 7.485a2.36 2.36 0 0 0-1.188-1.368c-.54-.27-1.188-.336-2.256.021L5.187 11.775c-1.068.357-1.548.795-1.818 1.338a2.36 2.36 0 0 0 1.059 3.174c.54.27 1.188.336 2.256-.021l12.129-4.041c1.068-.357 1.548-.795 1.818-1.341a2.35 2.35 0 0 0 .13-1.806zm0 7.488a2.36 2.36 0 0 0-1.188-1.368c-.54-.27-1.188-.336-2.256.021L5.187 19.263c-1.068.357-1.548.795-1.818 1.338a2.36 2.36 0 0 0 1.059 3.174c.54.27 1.188.336 2.256-.02l12.129-4.045c1.068-.354 1.548-.795 1.818-1.338a2.35 2.35 0 0 0 .13-1.806z"/></svg></span>
     <div>
       <p class="ro">Ericsson</p>
       <p class="rd">Wireless Network Engineer, China R&amp;D, Nanjing<br>Design and optimisation of large-scale 3G and 4G radio access networks</p>
@@ -477,10 +446,8 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
   </div>
 </div></section>
 
-<!-- ---------------------------------------------------------------- -->
 <section id="awards"><div class="col">
   <div class="sh"><h2>Awards &amp; Service</h2></div>
-
   <p class="sub">Honors and Awards</p>
   <ul class="mini">
     <li><span class="k">2025</span><span>Martin D. Fraser Graduate Student Conference Travel Award, Georgia State University</span></li>
@@ -489,7 +456,6 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
     <li><span class="k">2023</span><span>Inaugural Martin D. Fraser Graduate Student Conference Travel Award, Georgia State University</span></li>
     <li><span class="k">2023</span><span>NSF Student Travel Grant, ACM/IEEE Symposium on Edge Computing</span></li>
   </ul>
-
   <p class="sub">Professional Service</p>
   <ul class="mini">
     <li><span class="k">2023–</span><span>Reviewer, IEEE Internet of Things Journal</span></li>
@@ -519,12 +485,9 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
     try{localStorage.setItem(key,n)}catch(e){}
   });
 
-  /* 邮箱拼接后写入，降低被爬虫收割的概率 */
   var u='xtu1', d='gsu.edu', m=document.getElementById('mail');
-  m.setAttribute('href','mailto:'+u+'@'+d);
-  m.textContent=u+'@'+d;
+  m.setAttribute('href','mailto:'+u+'@'+d); m.textContent=u+'@'+d;
 
-  /* News 展开 / 收起 */
   var btn=document.getElementById('more');
   var extras=document.querySelectorAll('#newslist li.extra');
   if(!extras.length){ btn.style.display='none'; }
@@ -540,8 +503,28 @@ footer{margin-top:58px;border-top:2.5px solid var(--heavy)}
   ph.addEventListener('error',function(){
     if(tried===0){ tried=1; ph.src='assets/img/Xiaolong_Tu_full.jpg'; return; }
     var b=document.createElement('div');
-    b.className='portrait-fb'; b.textContent='XT';
-    ph.replaceWith(b);
+    b.className='portrait-fb'; b.textContent='XT'; ph.replaceWith(b);
+  });
+
+  /* 学校 logo 缺失 → 退回首字母方块 */
+  document.querySelectorAll('img.lgi').forEach(function(im){
+    im.addEventListener('error',function(){
+      var s=document.createElement('span');
+      s.className='mono'; s.textContent=im.getAttribute('data-mono')||'';
+      im.replaceWith(s);
+    });
+  });
+
+  /* 会议 logo 缺失 → 整个槽位隐藏，不留空隙 */
+  document.querySelectorAll('.vlg img').forEach(function(im){
+    im.addEventListener('error',function(){
+      var p=im.closest('.vlg'); if(p) p.remove();
+    });
+  });
+
+  /* 没有配图的论文自动占满整行（防止手动漏改 nofig） */
+  document.querySelectorAll('article.pub').forEach(function(a){
+    if(!a.querySelector('.pfig')) a.classList.add('nofig');
   });
 })();
 </script>
